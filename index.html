@@ -62,6 +62,56 @@
     @media(max-width:600px){.desktop-contact{display:none}.hero-content{padding-block:37px 30px}.hero h1{font-size:2.35rem}.hero-quicklinks{margin-top:18px;gap:6px}.hero-quicklinks a{font-size:14px;padding:5px 10px}.welcome-dialog{width:calc(100% - 30px)}.welcome-top{padding:30px 24px 22px}.welcome-top h2{font-size:26px}.welcome-body{padding:23px 24px 19px}.welcome-number{font-size:29px}.welcome-body p{font-size:16px}.faq details[open]{padding-inline:12px}}
     @media(max-width:360px){.wrap{width:calc(100% - 28px)}.brand strong{font-size:15px}.brand small{font-size:12px}.brand img{width:39px;height:39px}.header-inner{gap:7px}.hero h1{font-size:2.1rem}.hero .btn{font-size:15px;padding-inline:7px}.service-card{padding-inline:13px}.service-card h3{font-size:18px}.welcome-top h2{font-size:24px}}
     @media(prefers-reduced-motion:reduce){.brand img,.signature-mark,.btn,.header-call,.hero-quicklinks a,.service-card,.faq details{transition:none}.brand img,.welcome-logo,.btn[data-contact] .icon,.header-call:hover .icon,.hero .btn-gold:after,.mobile-bar .btn-gold:after,.welcome-dialog[open]{animation:none}.brand:hover img,.signature-mark:hover,.btn:hover,.btn:active{transform:none}}
+    /* Refined visual system: calmer surfaces, clearer cards, and a branded ad-contact dialog. */
+    body{background:#fbfcfb}
+    .site-header{box-shadow:0 5px 22px #1022180a}
+    .hero{background:radial-gradient(ellipse at 13% 15%,#31523f 0,transparent 42%),linear-gradient(125deg,#102218 0%,#193728 58%,#142b20 100%)}
+    .hero-content .eyebrow{width:max-content;max-width:100%;padding:7px 13px;border:1px solid #e0b56255;border-radius:999px;background:#ffffff08}
+    .hero h1{letter-spacing:-.02em}
+    .hero .btn-gold{box-shadow:0 8px 24px #e0b56229}
+    .hero-visual:before{background:linear-gradient(0deg,#0c2119ed,transparent 62%),linear-gradient(90deg,transparent 68%,var(--forest))}
+    .pillars-grid{gap:12px}
+    .pillar{border:1px solid #e6ebe7;border-radius:10px;background:linear-gradient(145deg,#fff,#f8faf8);padding:18px 20px;box-shadow:0 7px 22px #142b2008}
+    .services-grid{border:0;gap:15px}
+    .service-card{border:1px solid #e5eae6;border-radius:11px;background:linear-gradient(150deg,#fff,#fcfdfc);min-height:250px;padding:27px 25px;box-shadow:0 7px 24px #142b2008}
+    .service-card:hover{background:#fff;transform:translateY(-4px);box-shadow:0 16px 34px #142b2014}
+    .service-card.selected{background:linear-gradient(145deg,#f8f3e9,#fff);box-shadow:inset 0 3px 0 #ae823d,0 12px 26px #142b2010}
+    .service-icon{width:43px;height:43px;padding:10px;border-radius:10px;background:#f4eddf;color:#80602a}
+    .focus-panel{border:1px solid #ffffff19;border-radius:12px;background:radial-gradient(ellipse at 5% 0%,#30543e,transparent 58%),var(--forest);box-shadow:0 16px 40px #142b2016}
+    .about-photo img{border-radius:12px;box-shadow:0 18px 48px #142b2018}
+    .step{border:1px solid #e5eae6;border-radius:11px;background:#fff;padding:23px 24px;box-shadow:0 8px 24px #142b2008}
+    .step-number{display:flex;width:48px;height:48px;align-items:center;justify-content:center;border-radius:50%;background:#f3eddf;font-size:24px;color:#80602a;margin-bottom:19px}
+    .contact{background:radial-gradient(ellipse at 90% 10%,#294b38,transparent 44%),linear-gradient(135deg,#102218,#183526)}
+    .contact-box{border:1px solid #e6ece7;border-radius:12px;box-shadow:0 22px 56px #06190f35}
+    .contact-box .btn{border-radius:8px}
+    .faq details{border:1px solid #e4eae5;border-radius:9px;padding:17px 19px;margin-bottom:10px;background:#fff;transition:background .2s,box-shadow .2s,transform .2s}
+    .faq details:first-child{border-top:1px solid #e4eae5}
+    .faq details[open]{padding-inline:19px;box-shadow:0 8px 24px #142b2008}
+    .search-topics{background:linear-gradient(180deg,#f7f9f7,#fff);border-top:1px solid #e6ebe7}
+    .keyword-links a{border-radius:999px;padding:8px 15px;box-shadow:0 3px 10px #142b2007}
+    .keyword-links a.active{background:#1c3b2b;border-color:#1c3b2b;color:#fff;box-shadow:0 7px 18px #142b2020}
+    .welcome-dialog{border:1px solid #ffffffb0;border-radius:20px;box-shadow:0 28px 110px #06190f70;overflow:hidden}
+    .welcome-dialog::backdrop{background:#07170fd1;backdrop-filter:blur(9px);animation:welcome-backdrop .35s ease-out both}
+    .welcome-dialog[open]{animation:welcome-pop-in .55s cubic-bezier(.18,.86,.25,1.12) both}
+    .welcome-top{background:radial-gradient(ellipse at 50% -20%,#3d684d 0,transparent 65%),linear-gradient(145deg,#102218,#1a3929);padding:34px 32px 29px}
+    .welcome-top:after{content:"";display:block;height:3px;position:absolute;bottom:-3px;left:14%;right:14%;background:linear-gradient(90deg,transparent,#f0cd8c,transparent);filter:drop-shadow(0 0 8px #e0b562)}
+    .welcome-logo{box-shadow:0 8px 28px #06190f50}
+    .welcome-service-label{display:inline-flex;align-items:center;gap:7px;margin:0 auto 12px;padding:6px 13px;border:1px solid #e0b56266;border-radius:999px;background:#ffffff0b;color:#f3d79e;font-size:14px;font-weight:700}
+    .welcome-service-label:before{content:"";width:7px;height:7px;border-radius:50%;background:#e0b562;box-shadow:0 0 0 4px #e0b56220}
+    .welcome-top h2{font-size:clamp(25px,5vw,31px);text-wrap:balance}
+    .welcome-body{padding:28px 32px 25px}
+    .welcome-actions .btn{border-radius:9px;transition:transform .22s,box-shadow .22s,filter .22s}
+    .welcome-dialog a.btn{color:#fff;text-decoration:none}
+    .welcome-dialog a.btn-gold{color:var(--deep)}
+    .welcome-actions .btn:hover{transform:translateY(-3px);box-shadow:0 10px 22px #142b2020;filter:saturate(1.08)}
+    .welcome-actions .btn-gold{box-shadow:0 7px 18px #e0b56230}
+    .welcome-actions .btn-green{box-shadow:0 7px 18px #142b2018}
+    .welcome-browse{margin-top:13px}
+    @keyframes welcome-pop-in{0%{opacity:0;transform:translateY(24px) scale(.94)}65%{opacity:1;transform:translateY(-3px) scale(1.008)}100%{opacity:1;transform:translateY(0) scale(1)}}
+    @keyframes welcome-backdrop{from{opacity:0}to{opacity:1}}
+    @media(max-width:820px){.pillars-grid{grid-template-columns:repeat(3,1fr)}.step{padding:19px 17px}}
+    @media(max-width:600px){.pillars-grid{grid-template-columns:1fr;gap:9px}.pillar{display:flex;padding:13px 16px}.pillar .icon{margin:0}.services-grid{gap:10px}.service-card{padding:19px 16px;min-height:230px}.step{padding:19px;border-radius:9px}.welcome-dialog{max-width:430px;border-radius:17px}.welcome-body{padding:24px 23px 21px}}
+    @media(prefers-reduced-motion:reduce){.welcome-dialog[open],.welcome-dialog::backdrop{animation:none}.service-card:hover,.welcome-actions .btn:hover{transform:none}}
   </style>
 </head>
 <body id="top">
@@ -163,7 +213,7 @@
   <dialog id="terms-dialog" class="dialog" aria-labelledby="terms-title"><div class="dialog-head"><h2 id="terms-title">شروط الاستخدام</h2><button type="button" class="dialog-close">إغلاق</button></div><p>يعرض الموقع معلومات تعريفية عن المكتب وخدماته. ولا يُعد المحتوى العام رأيًا قانونيًا في واقعة بعينها.</p><h3>طلب الخدمة</h3><p>التواصل الأولي أو إرسال رسالة لا يعني قبول التكليف أو بدء التمثيل القانوني. يتحدد نطاق الخدمة والأتعاب والالتزامات وفق الاتفاق مع المكتب.</p><h3>نتائج العمل</h3><p>تتوقف النتائج على الوقائع والمستندات والإجراءات وتقدير الجهات المختصة. لا يتضمن الموقع ضمانًا لنتيجة قضائية أو مدة محددة لإنجاز المعاملة.</p><h3>التواصل والروابط الخارجية</h3><p>تفتح أزرار الاتصال وواتساب تطبيقات أو خدمات خارج الصفحة، وفق إعدادات جهازك وشروط مزودها. ويمكنك تعديل نص رسالة واتساب قبل إرسالها.</p></dialog>
   <a class="btn btn-green desktop-contact" href="https://wa.me/966556799995" target="_blank" rel="noopener noreferrer" data-contact="whatsapp" data-placement="desktop-float"><svg class="icon"><use href="#i-chat"/></svg>تواصل عبر واتساب</a>
   <dialog id="welcome-dialog" class="dialog welcome-dialog" aria-labelledby="welcome-title" aria-describedby="welcome-description">
-    <div class="welcome-top"><button type="button" class="dialog-close welcome-close" autofocus aria-label="إغلاق نافذة التواصل">إغلاق</button><img class="welcome-logo" src="./logo-main.png" alt="شعار مكتب العديني" width="65" height="61"><p class="eyebrow">مكتب العديني للمحاماة · جدة</p><h2 id="welcome-title">تحتاج إلى محامٍ في جدة؟</h2></div>
+    <div class="welcome-top"><button type="button" class="dialog-close welcome-close" autofocus aria-label="إغلاق نافذة التواصل">إغلاق</button><img class="welcome-logo" src="./logo-main.png" alt="شعار مكتب العديني" width="65" height="61"><p class="eyebrow">مكتب العديني للمحاماة · جدة</p><p class="welcome-service-label" id="welcome-service-label">استشارة قانونية في جدة</p><h2 id="welcome-title">تحتاج إلى محامٍ في جدة؟</h2></div>
     <div class="welcome-body"><p id="welcome-description">اتصل بالمكتب لمناقشة طلبك القانوني وتحديد الخدمة المناسبة لك.</p><a class="welcome-number" href="tel:+966556799995" dir="ltr" data-contact="phone" data-placement="welcome-popup">055 679 9995</a><div class="welcome-actions"><a class="btn btn-gold" href="tel:+966556799995" data-contact="phone" data-placement="welcome-popup"><svg class="icon"><use href="#i-phone"/></svg>اتصل الآن</a><a class="btn btn-green" href="https://wa.me/966556799995" target="_blank" rel="noopener noreferrer" data-contact="whatsapp" data-placement="welcome-popup"><svg class="icon"><use href="#i-chat"/></svg>تواصل عبر واتساب</a></div><p class="welcome-note">خصوصية في التعامل · توضيح الخدمة والأتعاب قبل البدء</p><button type="button" class="text-button welcome-browse" data-close-welcome>متابعة تصفح الصفحة</button></div>
   </dialog>
   <script>
@@ -185,12 +235,15 @@
       };
       const params = new URLSearchParams(location.search);
       const requested = (params.get('service') || '').toLowerCase();
-      let current = Object.hasOwn(services, requested) ? requested : 'general';
-      // Keyword matching maps only known categories; raw query strings are never inserted as HTML.
-      if (current === 'general' && !requested) {
-        const keyword = (params.get('keyword') || '').slice(0,200);
-        const rules = [['partnership',/شركاء|شراكة|شراكات|تصفية/],['labor',/عمالي|عمالية|عمل|مستحقات/],['realestate',/عقاري|عقارية|عقار|إيجار|ايجار/],['family',/احوال|أحوال|طلاق|نفقة|حضانة|ميراث|تركات/],['contracts',/صياغة|مراجعة.*عق[ود]/],['criminal',/جنائي|جنائية|جزائي|جزائية/],['execution',/تنفيذ|تحصيل/],['companies',/شركات|حوكمة|تأسيس/],['commercial',/تجاري|تجارية/],['consultation',/استشار/]];
-        const match = rules.find(([,pattern]) => pattern.test(keyword));
+      const hasExplicitService = Object.hasOwn(services, requested);
+      let current = hasExplicitService ? requested : 'general';
+      // Prefer an explicit service URL parameter. Otherwise classify ad keyword terms safely.
+      if (!hasExplicitService) {
+        const normalizeTerm = value => value.toLowerCase().normalize('NFKC').replace(/[\u064B-\u065F\u0670\u0640]/g, '').replace(/[أإآٱ]/g, 'ا').replace(/ى/g, 'ي').replace(/[^\p{L}\p{N}\s]/gu, ' ').replace(/\s+/g, ' ').trim();
+        const keyword = ['keyword','utm_term','search_term','term'].map(key => (params.get(key) || '').slice(0,200)).filter(Boolean).join(' ');
+        const term = normalizeTerm(keyword);
+        const rules = [['partnership',/شريك|شركاء|شراك|partnership/],['labor',/عمال|عمل|موظف|راتب|اجور|مستحقات|فصل تعسفي|employment|labou?r/],['realestate',/عقار|عقاري|ايجار|اخلاء|مؤجر|مستاجر|real estate|property|landlord|tenant/],['family',/احوال شخصيه|طلاق|خلع|نفقه|حضان|زياره|ميراث|تركات|ارث|family|divorce|custody/],['execution',/تنفيذ|تنفيذي|محكمه التنفيذ|سند لامر|تحصيل|استرداد دين|execution|debt recovery/],['criminal',/جزائي|جنائي|جريمه|مخدرات|ابتزاز|اعتداء|سرقه|criminal|crime/],['companies',/شركه|شركات|حوكمه|تاسيس|corporate|company/],['contracts',/عقود|عقد|صياغه|مراجعه|اتفاقيه|مقاوله|contract|drafting/],['commercial',/تجاري|تجار|مطالبه ماليه|منازعه تجاريه|commercial|business dispute/],['consultation',/استشار|محام|مكتب محاماه|رقم محامي|lawyer|attorney|legal advice/]];
+        const match = rules.find(([,pattern]) => pattern.test(term));
         if (match) current = match[0];
       }
       const whatsappURL = (key) => 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent('السلام عليكم، أرغب في التواصل مع مكتب عبدالعزيز العديني بشأن ' + services[key].name + '.');
@@ -211,7 +264,8 @@
       document.querySelector('meta[property="og:title"]').content = document.title;
       document.querySelector('meta[property="og:description"]').content = config.description;
       document.getElementById('welcome-title').textContent = current === 'general' ? 'تحتاج إلى محامٍ في جدة؟' : config.heading;
-      document.getElementById('welcome-description').textContent = current === 'general' ? 'اتصل بالمكتب لمناقشة طلبك القانوني وتحديد الخدمة المناسبة لك.' : 'تواصل مع المكتب لمناقشة طلبك بشأن ' + config.name + ' وتحديد الخطوة المناسبة.';
+      document.getElementById('welcome-service-label').textContent = current === 'general' ? 'استشارة قانونية · جدة' : config.name + ' · جدة';
+      document.getElementById('welcome-description').textContent = current === 'general' ? 'أرسل ملخصًا أوليًا لطلبك، وسنوضح لك الخدمة المناسبة والمعلومات اللازمة لدراسته.' : 'هل تحتاج إلى مساعدة في ' + config.name + '؟ تواصل مع المكتب لعرض ملخصك ومعرفة الخطوة المناسبة.';
       document.getElementById('focus-list').replaceChildren();
       document.querySelector('.all-services').hidden = current === 'general';
       document.getElementById('focus-panel').hidden = current === 'general';
@@ -258,9 +312,14 @@
       let welcomeSeen=false;
       try {welcomeSeen=sessionStorage.getItem('aledini-contact-welcome')==='1';} catch {}
       if (!welcomeSeen && typeof welcome.showModal === 'function') {
-        welcome.showModal();document.documentElement.classList.add('dialog-open');
-        try {sessionStorage.setItem('aledini-contact-welcome','1');} catch {}
-        window.dataLayer.push({event:'welcome_popup_view',landing_service:current});
+        // Let visitors see the service-specific landing message before the invitation appears.
+        window.setTimeout(() => {
+          if (welcomeSeen || document.hidden) return;
+          welcome.showModal();document.documentElement.classList.add('dialog-open');
+          welcomeSeen = true;
+          try {sessionStorage.setItem('aledini-contact-welcome','1');} catch {}
+          window.dataLayer.push({event:'welcome_popup_view',landing_service:current});
+        }, 1800);
       }
       document.getElementById('year').textContent = new Date().getFullYear();
     })();
