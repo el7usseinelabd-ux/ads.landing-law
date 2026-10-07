@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://el7usseinelabd-ux.github.io/ads.landing-law/sitemap.xml
