@@ -77,9 +77,9 @@ contact_click
 | `legal_service` | الخدمة التي اختارها الزائر للتواصل |
 | `landing_service` | الخدمة التي تعرضها الصفحة حاليًا |
 
-**هذه أحداث جاهزة للربط وليست تتبعًا مفعّلًا في Google Ads.** لا توجد معرفات حساب أو حاوية أو تحويلات مضافة، لعدم تزويدنا بها. لا تُرسل بيانات إلى Google في النسخة الحالية، ولا يرسل الحدث رقم العميل أو محتوى محادثته.
+**حالة الموقع:** أُضيف كود حاوية GTM المزوّد `GTM-KKHH6SBP` إلى `head` ووسم `noscript` بعد بداية `body`. الموقع يدفع حدث `contact_click` إلى `dataLayer` عند نقر واتساب أو الاتصال، ولا يتضمن رقم العميل أو محتوى المحادثة.
 
-للربط الفعلي: أضف كود حاوية Google Tag Manager الخاصة بالمكتب في الموضع المخصص داخل `head` وكودها التكميلي بعد بداية `body`؛ أنشئ مشغل Custom Event للاسم `contact_click`، مع شرط `contact_channel=whatsapp` لتحويل واتساب، وآخر للاتصال إذا لزم. اربط كل مشغل بوسم Google Ads Conversion Tracking باستخدام Conversion ID وConversion Label من حساب المكتب، وأضف Conversion Linker حسب إعداد الحاوية. اختبر باستخدام Tag Assistant قبل إطلاق الإعلان، وحدّث سياسة الخصوصية وإعدادات الموافقة بما يطابق أدوات القياس التي ستفعلها.
+**مهم:** تركيب الحاوية يتيح تحميل GTM وتمرير الحدث إليها، لكنه لا يثبت وحده أن Google Ads يستقبل تحويلات. يلزم أن تحتوي النسخة المنشورة في GTM على مشغل Custom Event باسم `contact_click`، ووسم Google Ads Conversion Tracking مضبوطًا بـ Conversion ID وConversion Label الصحيحين، ووسم Conversion Linker عند الحاجة. لم يتم التحقق بعد من إعدادات الحاوية أو حساب Ads؛ يجب مراجعتها في حساب GTM/Ads ثم اختبار الحدث في Tag Assistant قبل الاعتماد عليه أو إطلاق الحملة. راجع سياسة الخصوصية والموافقة بحسب الوسوم المنشورة داخل الحاوية.
 
 مرجع Google للـdataLayer: https://developers.google.com/tag-platform/tag-manager/datalayer
 

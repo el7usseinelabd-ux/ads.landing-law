@@ -47,8 +47,13 @@
     "serviceType": ["استشارات قانونية", "القضايا التجارية", "القضايا العمالية", "القضايا العقارية", "الأحوال الشخصية", "صياغة ومراجعة العقود", "القضايا الجزائية", "التنفيذ"]
   }
   </script>
-  <script>window.dataLayer = window.dataLayer || [];</script>
-  <!-- Insert your own Google Tag Manager container here after configuring its tags. -->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KKHH6SBP');</script>
+  <!-- End Google Tag Manager -->
   <style>
     @font-face{font-family:Tajawal;src:url('./tajawal-400.ttf') format('truetype');font-weight:400;font-display:swap}
     @font-face{font-family:Tajawal;src:url('./tajawal-500.ttf') format('truetype');font-weight:500;font-display:swap}
@@ -171,9 +176,14 @@
     .documentation-details{margin-top:26px;padding:32px;border:1px solid var(--line);border-radius:8px;background:var(--paper)}.documentation-intro{max-width:920px;margin:0 auto 28px;text-align:center}.documentation-intro h3{margin:0 0 12px;color:#282521;font-size:clamp(23px,3vw,31px)}.documentation-intro p{margin:0 auto 12px;color:#625d57;line-height:1.9}.documentation-details h4{margin:0 0 15px;color:#282521;font-size:22px}.documentation-service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.documentation-service-item{padding:20px;border:1px solid var(--line);border-radius:7px;background:#fff;box-shadow:0 5px 16px #29272408}.documentation-service-item h5{margin:0 0 7px;color:#8e5737;font-size:18px}.documentation-service-item p{margin:0;color:#625d57;line-height:1.8}.documentation-keywords{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 19px}.documentation-keywords span{display:inline-flex;padding:6px 11px;border:1px solid #e2dcd4;border-radius:999px;background:#fff;color:#8e5737;font-size:14px;font-weight:700}
     @media(max-width:1000px){.documentation-service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:600px){.documentation-details{padding:22px 16px}.documentation-service-grid{grid-template-columns:1fr;gap:10px}.documentation-service-item{padding:17px}}
+    .services-grid[hidden],#services .section-head[hidden]{display:none!important}
+    .documentation-service-item{scroll-margin-top:110px}
   </style>
 </head>
 <body id="top">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKHH6SBP" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
     <symbol id="i-phone" viewBox="0 0 24 24"><path d="m5 3 4 1 1 5-3 2c1.5 3 3 4.5 6 6l2-3 5 1 1 4c0 1-1 2-2 2C10 21 3 14 3 5c0-1 1-2 2-2Z"/></symbol>
     <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8.5 8.5 0 0 1-12.5 7.6L3 21l1.6-4.7A8.5 8.5 0 1 1 20 11.5Z"/><path d="M8 7c0 4 2 6 6 7l2-2-2-1-1 1-2-2 1-1-1-2Z"/></symbol>
@@ -212,7 +222,7 @@
             <a class="btn btn-outline" href="tel:+966556799995" data-contact="phone" data-placement="hero"><svg class="icon"><use href="#i-phone"/></svg>اتصل بالمكتب</a>
           </div>
           <p class="hero-note"><svg class="icon"><use href="#i-shield"/></svg>خصوصية في التعامل · وضوح في الإجراءات والأتعاب</p>
-          <nav class="hero-quicklinks" aria-label="اختر مجال استشارتك"><a href="?service=commercial#top" data-landing-service="commercial">تجاري وشركات</a><a href="?service=labor#top" data-landing-service="labor">قضايا عمالية</a><a href="?service=family#top" data-landing-service="family">أحوال شخصية</a><a href="?service=contracts#top" data-landing-service="contracts">مراجعة العقود</a></nav>
+          <nav class="hero-quicklinks" aria-label="اختصارات مجالات الخدمة"><a href="?service=commercial#top" data-landing-service="commercial" data-shortcut-group="legal">تجاري وشركات</a><a href="?service=labor#top" data-landing-service="labor" data-shortcut-group="legal">قضايا عمالية</a><a href="?service=family#top" data-landing-service="family" data-shortcut-group="legal">أحوال شخصية</a><a href="?service=contracts#top" data-landing-service="contracts" data-shortcut-group="legal">مراجعة العقود</a><a href="#doc-agencies" data-shortcut-group="documentation" hidden>توثيق الوكالات</a><a href="#doc-realestate" data-shortcut-group="documentation" hidden>التوثيق العقاري</a><a href="#doc-finance" data-shortcut-group="documentation" hidden>الإقرارات المالية</a><a href="#doc-companies" data-shortcut-group="documentation" hidden>عقود الشركات</a><a href="#doc-ip" data-shortcut-group="documentation" hidden>الحقوق الفكرية</a></nav>
           <a class="all-services" href="./index.html#services" hidden>عرض جميع خدمات المكتب</a>
         </div>
         <div class="hero-visual">
@@ -227,15 +237,6 @@
       <div class="pillar"><svg class="icon"><use href="#i-scale"/></svg><div><strong>خيارات واضحة</strong><p>لفهم موقفك القانوني</p></div></div>
       <div class="pillar"><svg class="icon"><use href="#i-shield"/></svg><div><strong>متابعة مسؤولة</strong><p>في كل مرحلة من العمل</p></div></div>
     </div></div>
-    <section id="about" class="section about" aria-labelledby="about-title">
-      <div class="wrap about-grid">
-        <div class="about-photo"><img src="./about-img.jpg" alt="صورة توضيحية لقضاء المملكة العربية السعودية" width="700" height="700" loading="lazy" decoding="async"></div>
-        <div class="about-content"><p class="eyebrow">عن المكتب</p><h2 id="about-title">نفهم التفاصيل،<br>لنحدد المسار المناسب.</h2><p>مكتب عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية في جدة، ويقدم خدمات قانونية للأفراد والشركات في الاستشارات، وصياغة العقود ومراجعتها، ومتابعة المنازعات.</p><p>نبدأ بفهم الوقائع وفحص المستندات، ثم نوضح الموقف القانوني والإجراءات المقترحة ونطاق العمل، قبل اتخاذ الخطوة التالية.</p>
-          <ul class="about-points"><li><svg class="icon"><use href="#i-check"/></svg>دراسة كل مسألة بحسب ظروفها ومستنداتها</li><li><svg class="icon"><use href="#i-check"/></svg>اتفاق واضح على الخدمة والأتعاب</li><li><svg class="icon"><use href="#i-check"/></svg>عناية بسرية معلومات العميل ومتابعة طلبه</li></ul>
-          <div class="about-signature"><div><strong>عبدالعزيز العديني</strong><p>المحاماة والاستشارات القانونية</p></div><img class="signature-mark" src="./logo-main.png" alt="" width="48" height="48" loading="lazy"></div>
-        </div>
-      </div>
-    </section>
     <section id="services" class="section" aria-labelledby="services-title">
       <div class="wrap">
         <div class="section-head"><div><p class="eyebrow">خدمات قانونية في جدة</p><h2 id="services-title">دعم قانوني للأفراد<br>والشركات.</h2></div><p>استشارات قانونية، وصياغة ومراجعة عقود، ومتابعة للمنازعات والإجراءات. استعرض المجالات واختر الخدمة الأقرب إلى طلبك.</p></div>
@@ -250,10 +251,20 @@
           <article class="service-card" data-card="documentation"><svg class="icon service-icon"><use href="#i-file"/></svg><h3>التوثيق العدلي</h3><p>خدمات توثيق عدلي معتمدة للأفراد والشركات والمنشآت في جدة ومنطقة مكة المكرمة، تشمل الوكالات والعقارات والإقرارات والعقود.</p><a href="https://wa.me/966556799995" target="_blank" rel="noopener noreferrer" data-contact="whatsapp" data-service="documentation" data-placement="service">استفسر عن خدمة التوثيق</a></article>
           <article class="service-card" data-card="consultation"><svg class="icon service-icon"><use href="#i-scale"/></svg><h3>الاستشارات القانونية</h3><p>تحليل موقفك، وتوضيح البدائل القانونية لاتخاذ قرار على أساس مدروس.</p><a href="https://wa.me/966556799995" target="_blank" rel="noopener noreferrer" data-contact="whatsapp" data-service="consultation" data-placement="service">اطلب استشارة قانونية</a></article>
         </div>
-        <div class="documentation-details" id="documentation-details" aria-labelledby="documentation-title" hidden><div class="documentation-intro"><h3 id="documentation-title">خدمة مرنة وخصوصية راسخة</h3><p>نقدم خدمات التوثيق العدلي للأفراد والشركات والمنشآت داخل منطقة مكة المكرمة، بخطوات واضحة تساعدك على إنجاز معاملتك دون الحاجة إلى مراجعة كتابات العدل في كل خطوة.</p><p>نرتب لك الإجراء المناسب، ونوضح المستندات والتكلفة قبل التنفيذ، مع المحافظة على سرية معلوماتك وإتاحة التواصل في الوقت الأنسب لك.</p></div><h4>أبرز خدمات التوثيق</h4><div class="documentation-keywords" aria-label="كلمات أبرز خدمات التوثيق"><span>توثيق الوكالات</span><span>التوثيق العقاري</span><span>الإقرارات المالية</span><span>عقود الشركات</span><span>الحقوق الفكرية</span></div><div class="documentation-service-grid"><article class="documentation-service-item"><h5>الوكالات</h5><p>إصدار الوكالات وفسخها للأفراد والشركات.</p></article><article class="documentation-service-item"><h5>التوثيق العقاري</h5><p>توثيق البيع والإفراغ والرهن وفكّه وتعديل الصكوك العقارية.</p></article><article class="documentation-service-item"><h5>الإقرارات المالية</h5><p>توثيق الإقرار بالدين والكفالة الحضورية والغرَمية وفكّها.</p></article><article class="documentation-service-item"><h5>الشركات والعقود</h5><p>تأسيس الشركات وعقودها وملاحق التعديل والعقود الواقعة على المال المنقول.</p></article><article class="documentation-service-item"><h5>الحقوق الفكرية</h5><p>توثيق براءات الاختراع وحقوق المؤلف والعلامات التجارية.</p></article><article class="documentation-service-item"><h5>خدمات الأفراد والمنشآت</h5><p>حلول توثيق عملية للأفراد والبنوك والمنشآت الصغيرة.</p></article></div></div>
+        <div class="documentation-details" id="documentation-details" aria-labelledby="documentation-title" hidden><div class="documentation-intro"><h3 id="documentation-title">خدمة مرنة وخصوصية راسخة</h3><p>نقدم خدمات التوثيق العدلي للأفراد والشركات والمنشآت داخل منطقة مكة المكرمة، بخطوات واضحة تساعدك على إنجاز معاملتك دون الحاجة إلى مراجعة كتابات العدل في كل خطوة.</p><p>نرتب لك الإجراء المناسب، ونوضح المستندات والتكلفة قبل التنفيذ، مع المحافظة على سرية معلوماتك وإتاحة التواصل في الوقت الأنسب لك.</p></div><h4>أبرز خدمات التوثيق</h4><div class="documentation-keywords" aria-label="كلمات أبرز خدمات التوثيق"><span>توثيق الوكالات</span><span>التوثيق العقاري</span><span>الإقرارات المالية</span><span>عقود الشركات</span><span>الحقوق الفكرية</span></div><div class="documentation-service-grid"><article class="documentation-service-item" id="doc-agencies"><h5>الوكالات</h5><p>إصدار الوكالات وفسخها للأفراد والشركات.</p></article><article class="documentation-service-item" id="doc-realestate"><h5>التوثيق العقاري</h5><p>توثيق البيع والإفراغ والرهن وفكّه وتعديل الصكوك العقارية.</p></article><article class="documentation-service-item" id="doc-finance"><h5>الإقرارات المالية</h5><p>توثيق الإقرار بالدين والكفالة الحضورية والغرَمية وفكّها.</p></article><article class="documentation-service-item" id="doc-companies"><h5>الشركات والعقود</h5><p>تأسيس الشركات وعقودها وملاحق التعديل والعقود الواقعة على المال المنقول.</p></article><article class="documentation-service-item" id="doc-ip"><h5>الحقوق الفكرية</h5><p>توثيق براءات الاختراع وحقوق المؤلف والعلامات التجارية.</p></article><article class="documentation-service-item"><h5>خدمات الأفراد والمنشآت</h5><p>حلول توثيق عملية للأفراد والبنوك والمنشآت الصغيرة.</p></article></div></div>
         <div class="focus-panel" id="focus-panel" hidden><div><h3 id="focus-title"></h3><p id="focus-description"></p></div><ul id="focus-list"></ul></div>
       </div>
     </section>
+    <section id="about" class="section about" aria-labelledby="about-title">
+      <div class="wrap about-grid">
+        <div class="about-photo"><img src="./about-img.jpg" alt="صورة توضيحية لقضاء المملكة العربية السعودية" width="700" height="700" loading="lazy" decoding="async"></div>
+        <div class="about-content"><p class="eyebrow">عن المكتب</p><h2 id="about-title">نفهم التفاصيل،<br>لنحدد المسار المناسب.</h2><p>مكتب عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية في جدة، ويقدم خدمات قانونية للأفراد والشركات في الاستشارات، وصياغة العقود ومراجعتها، ومتابعة المنازعات.</p><p>نبدأ بفهم الوقائع وفحص المستندات، ثم نوضح الموقف القانوني والإجراءات المقترحة ونطاق العمل، قبل اتخاذ الخطوة التالية.</p>
+          <ul class="about-points"><li><svg class="icon"><use href="#i-check"/></svg>دراسة كل مسألة بحسب ظروفها ومستنداتها</li><li><svg class="icon"><use href="#i-check"/></svg>اتفاق واضح على الخدمة والأتعاب</li><li><svg class="icon"><use href="#i-check"/></svg>عناية بسرية معلومات العميل ومتابعة طلبه</li></ul>
+          <div class="about-signature"><div><strong>عبدالعزيز العديني</strong><p>المحاماة والاستشارات القانونية</p></div><img class="signature-mark" src="./logo-main.png" alt="" width="48" height="48" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" aria-labelledby="steps-title"><div class="wrap">
       <div class="steps-head"><p class="eyebrow">آلية العمل</p><h2 id="steps-title">من فهم المسألة إلى تحديد الخطوة التالية.</h2><p>تواصل مع مكتب المحاماة في جدة، ثم دراسة أولية للمعلومات، وبعدها اتفاق واضح على نطاق الخدمة.</p></div>
       <div class="steps-grid"><article class="step"><span class="step-number" aria-hidden="true">01</span><h3>تواصل مع المكتب</h3><p>اذكر نوع المسألة وملخصًا أوليًا عنها، عبر الاتصال أو واتساب، لتحديد الخدمة المناسبة.</p></article><article class="step"><span class="step-number" aria-hidden="true">02</span><h3>نراجع موقفك القانوني</h3><p>نحدد المستندات المطلوبة لدراسة المسألة، ونوضح الخيارات والإجراءات التي تتناسب معها.</p></article><article class="step"><span class="step-number" aria-hidden="true">03</span><h3>نتفق على الخطوة التالية</h3><p>يتحدد نطاق الخدمة والأتعاب وآلية المتابعة، ثم يبدأ العمل وفق الاتفاق معك.</p></article></div>
@@ -319,6 +330,9 @@
       document.querySelector('.hero').classList.toggle('documentation-landing', current === 'documentation');
       document.getElementById('documentation-details').hidden = current !== 'documentation';
       document.querySelectorAll('[data-service-keyword="documentation"]').forEach(link => {link.hidden = current !== 'documentation';});
+      document.querySelectorAll('[data-shortcut-group]').forEach(link => {link.hidden = (link.dataset.shortcutGroup === 'documentation') !== (current === 'documentation');});
+      document.querySelector('#services .section-head').hidden = current === 'documentation';
+      document.querySelector('#services .services-grid').hidden = current === 'documentation';
       const title = document.getElementById('hero-title');
       title.firstChild.textContent = config.heading;
       const line = document.getElementById('hero-heading-line');
@@ -333,7 +347,11 @@
       document.getElementById('welcome-service-label').textContent = current === 'general' ? 'استشارة قانونية · جدة' : config.name + ' · جدة';
       document.getElementById('welcome-description').textContent = current === 'general' ? 'أرسل ملخصًا أوليًا لطلبك، وسنوضح لك الخدمة المناسبة والمعلومات اللازمة لدراسته.' : 'هل تحتاج إلى مساعدة في ' + config.name + '؟ تواصل مع المكتب لعرض ملخصك ومعرفة الخطوة المناسبة.';
       document.getElementById('focus-list').replaceChildren();
-      document.querySelector('.all-services').hidden = current === 'general';
+      const allServicesLink = document.querySelector('.all-services');
+      allServicesLink.hidden = current === 'general';
+      allServicesLink.href = current === 'documentation' ? '?service=documentation#services' : './index.html#services';
+      allServicesLink.textContent = current === 'documentation' ? 'عرض أبرز خدمات التوثيق' : 'عرض جميع خدمات المكتب';
+      allServicesLink.dataset.landingService = current === 'documentation' ? 'documentation' : 'general';
       document.getElementById('focus-panel').hidden = current === 'general' || current === 'documentation';
       document.getElementById('hero-eyebrow').textContent = current === 'general' ? 'مكتب محاماة في جدة · للأفراد والشركات' : config.name + ' · مكتب العديني للمحاماة';
       document.querySelectorAll('[data-card]').forEach(card => card.classList.toggle('selected',card.dataset.card.split(' ').includes(current)));
