@@ -178,6 +178,32 @@
     @media(max-width:600px){.documentation-details{padding:22px 16px}.documentation-service-grid{grid-template-columns:1fr;gap:10px}.documentation-service-item{padding:17px}}
     .services-grid[hidden],#services .section-head[hidden]{display:none!important}
     .documentation-service-item{scroll-margin-top:110px}
+    .documentation-page .site-header .nav,.documentation-page .site-header .menu-toggle{display:none!important}
+    .documentation-page .hero-visual,.documentation-page .hero-bottom,.documentation-page .pillars,
+    .documentation-page #services,.documentation-page #about,.documentation-page section[aria-labelledby="steps-title"],
+    .documentation-page #contact,.documentation-page .search-topics,.documentation-page .desktop-call,.documentation-page .desktop-contact,
+    .documentation-page #welcome-dialog{display:none!important}
+    .documentation-page .hero.documentation-landing .hero-grid{grid-template-columns:1fr;min-height:auto}
+    .documentation-page .hero.documentation-landing .hero-content{padding:38px 0 34px;text-align:center}
+    .documentation-page .hero.documentation-landing #hero-eyebrow,.documentation-page .hero.documentation-landing .hero-copy{display:none}
+    .documentation-page .hero.documentation-landing h1{font-size:clamp(36px,5vw,54px);margin-bottom:16px}
+    .documentation-page .hero.documentation-landing .actions,.documentation-page .hero.documentation-landing .hero-note,.documentation-page .hero.documentation-landing .hero-quicklinks{justify-content:center}
+    .documentation-page .hero.documentation-landing .actions{margin-bottom:15px}
+    .documentation-page .hero.documentation-landing .hero-note{margin-bottom:8px}
+    .documentation-page .hero.documentation-landing .hero-quicklinks{gap:9px;margin-top:13px}
+    .documentation-page .hero.documentation-landing .all-services{display:none!important}
+    .documentation-page .faq{padding-block:42px}
+    .documentation-page .faq-grid{grid-template-columns:1fr;gap:18px}
+    .documentation-page .faq-intro{max-width:700px}
+    .documentation-page .faq-intro h2{font-size:clamp(27px,3vw,34px)}
+    .documentation-page .faq details[hidden]{display:none!important}
+    .documentation-page .documentation-location{display:block;padding-block:28px;background:var(--paper)}
+    .documentation-page .documentation-location[hidden]{display:none!important}
+    .documentation-page .documentation-address{margin:9px 0;color:var(--muted);font-size:18px}
+    .documentation-page .documentation-location .map-link{display:inline-flex;align-items:center;gap:8px;text-decoration:underline;text-underline-offset:4px}
+    .documentation-page .site-footer{padding-block:14px}
+    .documentation-page .footer-brand,.documentation-page .footer-bottom,.documentation-page .footer-links>a{display:none!important}
+    .documentation-page .footer-main{justify-content:center;padding-bottom:0}
   </style>
 </head>
 <body id="top">
@@ -218,11 +244,11 @@
           <h1 id="hero-title">محامي في جدة<span id="hero-heading-line">رؤية واضحة.<br>خطوة قانونية مدروسة.</span></h1>
           <p class="hero-copy" id="hero-description">يقدم مكتب عبدالعزيز العديني للمحاماة في جدة استشارات وخدمات قانونية للأفراد والشركات. ندرس الوقائع والمستندات، ونوضح الخيارات والإجراءات وفق الأنظمة السعودية.</p>
           <div class="actions">
-            <a class="btn btn-gold" href="https://wa.me/966556799995?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D9%82%D8%A7%D9%86%D9%88%D9%86%D9%8A%D8%A9." target="_blank" rel="noopener noreferrer" data-contact="whatsapp" data-placement="hero"><svg class="icon"><use href="#i-chat"/></svg>تواصل عبر واتساب</a>
-            <a class="btn btn-outline" href="tel:+966556799995" data-contact="phone" data-placement="hero"><svg class="icon"><use href="#i-phone"/></svg>اتصل بالمكتب</a>
+            <a class="btn btn-gold" href="https://wa.me/966556799995" target="_blank" rel="noopener noreferrer" data-contact="whatsapp" data-placement="hero"><svg class="icon"><use href="#i-chat"/></svg><span id="hero-whatsapp-label">تواصل عبر واتساب</span></a>
+            <a class="btn btn-outline" href="tel:+966556799995" data-contact="phone" data-placement="hero"><svg class="icon"><use href="#i-phone"/></svg><span id="hero-call-label">اتصل بالمكتب</span></a>
           </div>
-          <p class="hero-note"><svg class="icon"><use href="#i-shield"/></svg>خصوصية في التعامل · وضوح في الإجراءات والأتعاب</p>
-          <nav class="hero-quicklinks" aria-label="اختصارات مجالات الخدمة"><a href="?service=commercial#top" data-landing-service="commercial" data-shortcut-group="legal">تجاري وشركات</a><a href="?service=labor#top" data-landing-service="labor" data-shortcut-group="legal">قضايا عمالية</a><a href="?service=family#top" data-landing-service="family" data-shortcut-group="legal">أحوال شخصية</a><a href="?service=contracts#top" data-landing-service="contracts" data-shortcut-group="legal">مراجعة العقود</a><a href="#doc-agencies" data-shortcut-group="documentation" hidden>توثيق الوكالات</a><a href="#doc-realestate" data-shortcut-group="documentation" hidden>التوثيق العقاري</a><a href="#doc-finance" data-shortcut-group="documentation" hidden>الإقرارات المالية</a><a href="#doc-companies" data-shortcut-group="documentation" hidden>عقود الشركات</a><a href="#doc-ip" data-shortcut-group="documentation" hidden>الحقوق الفكرية</a></nav>
+          <p class="hero-note"><svg class="icon"><use href="#i-shield"/></svg><span id="hero-note-text">خصوصية في التعامل · وضوح في الإجراءات والأتعاب</span></p>
+          <nav class="hero-quicklinks" aria-label="اختصارات مجالات الخدمة"><a href="?service=commercial#top" data-landing-service="commercial" data-shortcut-group="legal">تجاري وشركات</a><a href="?service=labor#top" data-landing-service="labor" data-shortcut-group="legal">قضايا عمالية</a><a href="?service=family#top" data-landing-service="family" data-shortcut-group="legal">أحوال شخصية</a><a href="?service=contracts#top" data-landing-service="contracts" data-shortcut-group="legal">مراجعة العقود</a><a href="https://wa.me/966556799995" target="_blank" rel="noopener noreferrer" data-contact="whatsapp" data-service="documentation" data-placement="documentation-keyword" data-wa-message="السلام عليكم، أرغب في توثيق وكالة. ما المستندات المطلوبة؟" data-shortcut-group="documentation" hidden>توثيق وكالة</a><a href="https://wa.me/966556799995" target="_blank" rel="noopener noreferrer" data-contact="whatsapp" data-service="documentation" data-placement="documentation-keyword" data-wa-message="السلام عليكم، أرغب في الاستفسار عن الإفراغ العقاري. ما الخطوات والمستندات المطلوبة؟" data-shortcut-group="documentation" hidden>إفراغ عقاري</a><a href="https://wa.me/966556799995" target="_blank" rel="noopener noreferrer" data-contact="whatsapp" data-service="documentation" data-placement="documentation-keyword" data-wa-message="السلام عليكم، أرغب في توثيق إقرار مالي. ما المتطلبات؟" data-shortcut-group="documentation" hidden>إقرار مالي</a><a href="https://wa.me/966556799995" target="_blank" rel="noopener noreferrer" data-contact="whatsapp" data-service="documentation" data-placement="documentation-keyword" data-wa-message="السلام عليكم، أرغب في توثيق عقد شركة. ما المستندات المطلوبة؟" data-shortcut-group="documentation" hidden>عقد شركة</a></nav>
           <a class="all-services" href="./index.html#services" hidden>عرض جميع خدمات المكتب</a>
         </div>
         <div class="hero-visual">
@@ -274,9 +300,10 @@
       <div class="contact-box"><h3>ما الخدمة التي تحتاجها؟</h3><p>حدد مجال طلبك، ثم افتح واتساب للتواصل مباشرة مع المكتب.</p><label for="service-select">نوع الخدمة القانونية</label><select id="service-select"><option value="general">استشارة عامة / لست متأكدًا</option><option value="commercial">القضايا التجارية</option><option value="companies">الشركات والحوكمة</option><option value="partnership">منازعات الشركاء</option><option value="labor">القضايا العمالية</option><option value="realestate">القضايا العقارية</option><option value="family">الأحوال الشخصية والميراث</option><option value="contracts">صياغة ومراجعة العقود</option><option value="criminal">القضايا الجزائية</option><option value="execution">التنفيذ وتحصيل الحقوق</option><option value="documentation">التوثيق العدلي</option><option value="consultation">الاستشارات القانونية</option></select><a id="consultation-link" class="btn btn-green" href="https://wa.me/966556799995" target="_blank" rel="noopener noreferrer" data-contact="whatsapp" data-placement="request"><svg class="icon"><use href="#i-chat"/></svg>ابدأ المحادثة على واتساب</a><a class="btn btn-light" href="tel:+966556799995" data-contact="phone" data-placement="request"><svg class="icon"><use href="#i-phone"/></svg>أفضل التواصل بالاتصال</a><small>تُفتح رسالة جاهزة، ويمكنك تعديلها قبل إرسالها.</small></div>
     </div></section>
     <section class="section faq" aria-labelledby="faq-title"><div class="wrap faq-grid">
-      <div class="faq-intro"><p class="eyebrow">أسئلة شائعة</p><h2 id="faq-title">إجابات تساعدك<br>على البداية.</h2><p>تحتاج إلى توضيح إضافي؟ تواصل مع المكتب لمناقشة تفاصيل طلبك.</p></div>
+      <div class="faq-intro"><p class="eyebrow">أسئلة شائعة</p><h2 id="faq-title">إجابات تساعدك<br>على البداية.</h2><p id="faq-description">تحتاج إلى توضيح إضافي؟ تواصل مع المكتب لمناقشة تفاصيل طلبك.</p></div>
       <div><details><summary>كيف أطلب استشارة قانونية؟</summary><p>يمكنك الاتصال بالمكتب على 0556799995 أو التواصل عبر واتساب، مع ذكر نوع المسألة وملخصها. يحدد المكتب معك آلية الاستشارة وموعدها والأتعاب بحسب نطاقها.</p></details><details><summary>ما المستندات المطلوبة لدراسة القضية؟</summary><p>تختلف بحسب موضوعها؛ فقد تشمل العقد، والمراسلات، ومستندات المطالبة، أو الأحكام ومحاضر الجلسات. يوضح لك المكتب ما يلزم بعد الاطلاع على ملخص طلبك.</p></details><details><summary>كيف تُحدد الأتعاب القانونية؟</summary><p>بحسب نوع الخدمة، وحجم المستندات، وطبيعة المسألة ونطاق العمل المطلوب. يتضح نطاق الخدمة والأتعاب بالاتفاق قبل البدء فيها.</p></details><details><summary>هل يمكن التواصل دون الحضور إلى المكتب؟</summary><p>يمكن بدء التواصل بالاتصال أو واتساب. ويُحدد معك ما إذا كانت الخدمة يمكن تقديمها عن بُعد، أو تتطلب موعدًا للحضور إلى المكتب في جدة.</p></details><details><summary>ما خدمات التوثيق العدلي التي يقدمها المكتب؟</summary><p>تشمل خدمات التوثيق العدلي إصدار الوكالات وفسخها، والتوثيق العقاري والإقرارات المالية، وتأسيس الشركات وعقودها وملاحق التعديل، إضافة إلى توثيق الحقوق الفكرية وخدمات الأفراد والمنشآت.</p></details><details><summary>هل يقدم المكتب خدمات للشركات؟</summary><p>نعم، في الاستشارات القانونية وصياغة ومراجعة العقود، ومنازعات الشركات والشركاء، والمسائل المرتبطة بالتأسيس والحوكمة، بحسب نطاق التكليف.</p></details></div>
     </div></section>
+    <section id="documentation-location" class="section documentation-location" hidden aria-labelledby="documentation-location-title"><div class="wrap"><div><p class="eyebrow">الموقع</p><h2 id="documentation-location-title">مكتب التوثيق في جدة</h2><p class="documentation-address">جدة · طريق صاري · حي الروضة · 23326</p><a class="map-link" href="https://maps.app.goo.gl/rDctwALN59WZ3zFf6" target="_blank" rel="noopener noreferrer" aria-label="افتح الموقع الدقيق للمكتب على خرائط Google"><svg class="icon"><use href="#i-pin"/></svg>افتح الموقع الدقيق على خرائط Google</a></div></div></section>
     <section class="search-topics" aria-labelledby="search-topics-title"><div class="wrap"><h2 id="search-topics-title">مجالات الخدمة القانونية والتوثيق العدلي في جدة</h2><p>يقدم المكتب خدمات التوثيق العدلي المعتمدة للأفراد والشركات والمنشآت في منطقة مكة المكرمة، وتشمل توثيق الوكالات، والتوثيق العقاري، والإقرارات المالية، وعقود الشركات، والحقوق الفكرية، إلى جانب خدماته القانونية. اختر الخدمة المناسبة لمعرفة التفاصيل والتواصل مع المكتب.</p><nav class="keyword-links" aria-label="عبارات البحث المرتبطة بالخدمات"><a href="?service=general#top" data-landing-service="general">محامي في جدة</a> <a href="?service=general#top" data-landing-service="general">مكتب محاماة جدة</a> <a href="?service=consultation#top" data-landing-service="consultation">استشارة قانونية جدة</a> <a href="?service=consultation#top" data-landing-service="consultation">رقم محامي جدة</a> <a href="?service=consultation#top" data-landing-service="consultation">استشارات قانونية في السعودية</a> <a href="?service=commercial#top" data-landing-service="commercial">محامي قضايا تجارية جدة</a> <a href="?service=commercial#top" data-landing-service="commercial">منازعات تجارية جدة</a> <a href="?service=companies#top" data-landing-service="companies">محامي شركات جدة</a> <a href="?service=companies#top" data-landing-service="companies">استشارة قانونية للشركات</a> <a href="?service=partnership#top" data-landing-service="partnership">محامي منازعات شركاء جدة</a> <a href="?service=partnership#top" data-landing-service="partnership">نزاع بين الشركاء</a> <a href="?service=labor#top" data-landing-service="labor">محامي عمالي جدة</a> <a href="?service=labor#top" data-landing-service="labor">مستحقات عمالية جدة</a> <a href="?service=realestate#top" data-landing-service="realestate">محامي عقاري جدة</a> <a href="?service=realestate#top" data-landing-service="realestate">نزاع إيجار جدة</a> <a href="?service=family#top" data-landing-service="family">محامي أحوال شخصية جدة</a> <a href="?service=family#top" data-landing-service="family">محامي قضايا أسرية جدة</a> <a href="?service=family#top" data-landing-service="family">استشارة طلاق ونفقة جدة</a> <a href="?service=contracts#top" data-landing-service="contracts">محامي صياغة عقود جدة</a> <a href="?service=contracts#top" data-landing-service="contracts">مراجعة عقد تجاري جدة</a> <a href="?service=criminal#top" data-landing-service="criminal">محامي قضايا جزائية جدة</a> <a href="?service=execution#top" data-landing-service="execution">محامي تنفيذ جدة</a> <a href="?service=execution#top" data-landing-service="execution">تحصيل حقوق قضائي جدة</a> <a href="?service=documentation#top" data-landing-service="documentation" data-service-keyword="documentation" hidden>موثق معتمد في جدة</a> <a href="?service=documentation#top" data-landing-service="documentation" data-service-keyword="documentation" hidden>خدمات التوثيق العدلي جدة</a> <a href="?service=documentation#top" data-landing-service="documentation" >توثيق الوكالات جدة</a> <a href="?service=documentation#top" data-landing-service="documentation" >التوثيق العقاري جدة</a> <a href="?service=documentation#top" data-landing-service="documentation" >توثيق الإقرارات المالية جدة</a> <a href="?service=documentation#top" data-landing-service="documentation" >توثيق عقود الشركات جدة</a> <a href="?service=documentation#top" data-landing-service="documentation" >توثيق حقوق فكرية جدة</a></nav></div></section>
   </main>
   <footer class="site-footer"><div class="wrap"><div class="footer-main"><div class="footer-brand"><strong>مكتب عبدالعزيز عبدالله عيد العديني</strong><span>للمحاماة والاستشارات القانونية · جدة</span></div><div class="footer-links"><button class="text-button" type="button" data-dialog="privacy-dialog">سياسة الخصوصية</button><button class="text-button" type="button" data-dialog="terms-dialog">شروط الاستخدام</button><a href="#contact">تواصل معنا</a></div></div><div class="footer-bottom"><p>© <span id="year">2026</span> مكتب العديني. جميع الحقوق محفوظة.</p><p>المحتوى للتعريف بخدمات المكتب؛ ويتحدد الرأي القانوني بعد دراسة وقائع كل مسألة ومستنداتها.</p></div></div></footer>
@@ -304,7 +331,7 @@
         contracts: {name:'صياغة ومراجعة العقود', heading:'محامي صياغة عقود في جدة', line:'قبل أن توقع،\nافهم كل التزام.', description:'نصوغ العقود ونراجع بنودها، ونوضح المخاطر والالتزامات وآليات التنفيذ والإنهاء وتسوية النزاع، بما يتناسب مع طبيعة الاتفاق.', focus:'صياغة أوضح لتقليل الغموض في اتفاقك.', points:['تحديد نطاق العمل والحقوق والالتزامات','مراجعة الأتعاب والمدد وآليات التسليم والإنهاء','معالجة المسؤولية وتسوية المنازعات']},
         criminal: {name:'القضايا الجزائية', heading:'محامي قضايا جزائية في جدة', line:'دراسة دقيقة للملف،\nودفاع مبني على الوقائع.', description:'نراجع أوراق القضية والأدلة والإجراءات، ونعد المذكرات والدفوع، ونتولى الدفاع والترافع بحسب نطاق التكليف.', focus:'كل واقعة وإجراء في ملف القضية محل مراجعة.', points:['دراسة أوراق القضية والأدلة المتاحة','إعداد مذكرات الدفاع والاعتراضات','التمثيل القضائي ومتابعة الإجراءات']},
         execution: {name:'التنفيذ وتحصيل الحقوق', heading:'محامي تنفيذ في جدة', line:'من السند التنفيذي،\nإلى متابعة حقك.', description:'نراجع السندات والأحكام، ونتابع طلبات التنفيذ ومنازعاته والإجراءات المرتبطة بالمطالبة بالحقوق وفق نطاق التكليف.', focus:'متابعة طلبك تبدأ بفحص سنده ومستنداته.', points:['مراجعة الأحكام والسندات التنفيذية','إعداد طلبات التنفيذ ومتابعة إجراءاتها','دراسة منازعات التنفيذ والدفوع المتعلقة بها']},
-        documentation: {name:'خدمات التوثيق العدلي', heading:'موثق معتمد في جدة', line:'لخدمات التوثيق العدلي', description:'نقدم خدمات التوثيق العدلي للأفراد والشركات والمنشآت داخل منطقة مكة المكرمة، بخطوات واضحة تساعدك على إنجاز معاملتك دون الحاجة إلى مراجعة كتابات العدل في كل خطوة.', focus:'خدمة مرنة وخصوصية راسخة', points:['نرتب الإجراء المناسب ونوضح المستندات والتكلفة قبل التنفيذ','نصدر الوكالات ونفسخها للأفراد والشركات','نوثق البيع والإفراغ والرهن وفكّه وتعديل الصكوك العقارية','نوثق الإقرارات بالدين والكفالات الحضورية والغرَمية وفكّها','نوثق تأسيس الشركات وعقودها وملاحق التعديل وعقود المال المنقول','نوثق براءات الاختراع وحقوق المؤلف والعلامات التجارية وخدمات الأفراد والمنشآت']},
+        documentation: {name:'خدمات التوثيق العدلي', heading:'موثق معتمد في جدة', line:'توثيق الوكالات والإفراغ العقاري والإقرارات المالية وعقود الشركات', description:'خدمات توثيق عدلي للأفراد والشركات والمنشآت في جدة ومنطقة مكة المكرمة، بخطوات واضحة وخصوصية في التعامل.', pageTitle:'موثق معتمد في جدة: وكالات وإفراغ عقاري | مكتب العديني', focus:'خدمات التوثيق العدلي', points:['توثيق الوكالات للأفراد والشركات','الإفراغ والتوثيق العقاري','الإقرارات المالية','عقود الشركات والمنشآت']},
         consultation: {name:'الاستشارات القانونية', heading:'استشارات قانونية في جدة', line:'قرارك التالي،\nيبدأ بفهم موقفك.', description:'اعرض مسألتك على المكتب لدراسة وقائعها ومستنداتها، وتوضيح الخيارات القانونية والمخاطر والإجراءات المقترحة للأفراد والشركات.', focus:'رأي قانوني يرتبط بوقائعك ومستنداتك.', points:['فهم الوقائع وتحديد المسألة القانونية','تحليل المستندات والخيارات المتاحة','توضيح المخاطر والخطوة المقترحة']}
       };
       const params = new URLSearchParams(location.search);
@@ -323,23 +350,53 @@
       const whatsappURL = (key) => 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent('السلام عليكم، أرغب في التواصل مع مكتب عبدالعزيز العديني بشأن ' + services[key].name + '.');
       const select = document.getElementById('service-select');
       const consultationLink = document.getElementById('consultation-link');
+      const faqItems = Array.from(document.querySelectorAll('.faq details'));
+      const faqOriginalContent = faqItems.slice(-2).map(item => ({question:item.querySelector('summary').textContent,answer:item.querySelector('p').textContent}));
+      const documentationFaqContent = [
+        {question:'ما المستندات المطلوبة لتوثيق وكالة؟',answer:'تختلف المتطلبات بحسب نوع الوكالة وصفة الأطراف. أخبرنا بنوع المعاملة، وسنوضح لك المستندات اللازمة قبل البدء.'},
+        {question:'هل التوثيق متاح للشركات؟',answer:'نعم، تشمل خدمات التوثيق الأفراد والشركات والمنشآت. تواصل معنا لمعرفة المتطلبات الخاصة بمعاملتك.'}
+      ];
+      const faqTitle = document.getElementById('faq-title');
+      const faqTitleDefault = faqTitle.innerHTML;
+      const faqDescription = document.getElementById('faq-description');
+      const faqDescriptionDefault = faqDescription.textContent;
       function updateRequest(){consultationLink.href=whatsappURL(select.value);consultationLink.dataset.service=select.value;}
       function applyLanding(key) {
       current = key;
       const config = services[current];
-      document.querySelector('.hero').classList.toggle('documentation-landing', current === 'documentation');
+      const isDocumentation = current === 'documentation';
+      document.body.classList.toggle('documentation-page', isDocumentation);
+      document.querySelector('.hero').classList.toggle('documentation-landing', isDocumentation);
       document.getElementById('documentation-details').hidden = current !== 'documentation';
       document.querySelectorAll('[data-service-keyword="documentation"]').forEach(link => {link.hidden = current !== 'documentation';});
       document.querySelectorAll('[data-shortcut-group]').forEach(link => {link.hidden = (link.dataset.shortcutGroup === 'documentation') !== (current === 'documentation');});
       document.querySelector('#services .section-head').hidden = current === 'documentation';
-      document.querySelector('#services .services-grid').hidden = current === 'documentation';
+      document.querySelector('#services .services-grid').hidden = isDocumentation;
+      document.getElementById('documentation-location').hidden = !isDocumentation;
+      faqItems.forEach((item,index) => {
+        item.hidden = isDocumentation && index < faqItems.length - 2;
+        if (index >= faqItems.length - 2) {
+          const copy = isDocumentation ? documentationFaqContent[index - (faqItems.length - 2)] : faqOriginalContent[index - (faqItems.length - 2)];
+          item.querySelector('summary').textContent = copy.question;
+          item.querySelector('p').textContent = copy.answer;
+        }
+      });
+      faqTitle.innerHTML = isDocumentation ? 'أسئلة عن التوثيق العدلي' : faqTitleDefault;
+      faqDescription.textContent = isDocumentation ? 'إجابات سريعة عن متطلبات التوثيق وخدمات الأفراد والمنشآت.' : faqDescriptionDefault;
+      const heroWhatsApp = document.querySelector('.hero .actions a[data-contact="whatsapp"]');
+      const mobileWhatsApp = document.querySelector('.mobile-bar a[data-contact="whatsapp"]');
+      const docMainMessage = 'السلام عليكم، أرغب في توثيق: (وكالة / إفراغ عقاري / إقرار مالي / عقد شركة). ما المستندات المطلوبة؟';
+      [heroWhatsApp,mobileWhatsApp].forEach(link => {if(isDocumentation) link.dataset.waMessage = docMainMessage; else delete link.dataset.waMessage;});
+      document.getElementById('hero-whatsapp-label').textContent = isDocumentation ? 'اسأل عن خدمة التوثيق' : 'تواصل عبر واتساب';
+      document.getElementById('hero-call-label').textContent = isDocumentation ? 'اتصل بالموثق الآن' : 'اتصل بالمكتب';
+      document.getElementById('hero-note-text').textContent = isDocumentation ? 'موثق معتمد رسميًا · خصوصية في التعامل' : 'خصوصية في التعامل · وضوح في الإجراءات والأتعاب';
       const title = document.getElementById('hero-title');
       title.firstChild.textContent = config.heading;
       const line = document.getElementById('hero-heading-line');
       line.replaceChildren();
       config.line.split('\n').forEach((text,index) => {if(index) line.append(document.createElement('br'));line.append(document.createTextNode(text));});
       document.getElementById('hero-description').textContent = config.description;
-      document.title = config.heading + ' | مكتب عبدالعزيز العديني للمحاماة';
+      document.title = config.pageTitle || (config.heading + ' | مكتب عبدالعزيز العديني للمحاماة');
       document.querySelector('meta[name="description"]').content = config.description + ' تواصل مع مكتب عبدالعزيز العديني: 0556799995.';
       document.querySelector('meta[property="og:title"]').content = document.title;
       document.querySelector('meta[property="og:description"]').content = config.description;
@@ -348,7 +405,7 @@
       document.getElementById('welcome-description').textContent = current === 'general' ? 'أرسل ملخصًا أوليًا لطلبك، وسنوضح لك الخدمة المناسبة والمعلومات اللازمة لدراسته.' : 'هل تحتاج إلى مساعدة في ' + config.name + '؟ تواصل مع المكتب لعرض ملخصك ومعرفة الخطوة المناسبة.';
       document.getElementById('focus-list').replaceChildren();
       const allServicesLink = document.querySelector('.all-services');
-      allServicesLink.hidden = current === 'general';
+      allServicesLink.hidden = current === 'general' || isDocumentation;
       allServicesLink.href = current === 'documentation' ? '?service=documentation#services' : './index.html#services';
       allServicesLink.textContent = current === 'documentation' ? 'عرض أبرز خدمات التوثيق' : 'عرض جميع خدمات المكتب';
       allServicesLink.dataset.landingService = current === 'documentation' ? 'documentation' : 'general';
@@ -358,15 +415,21 @@
       document.querySelectorAll('[data-landing-service]').forEach(link => {const active=link.dataset.landingService===current;link.classList.toggle('active',active);if(active)link.setAttribute('aria-current','true');else link.removeAttribute('aria-current');});
       if (current !== 'general') {
         document.getElementById('hero-eyebrow').textContent = config.name + ' · مكتب العديني للمحاماة';
-        document.querySelector('.all-services').hidden = false;
-        document.getElementById('focus-panel').hidden = current === 'documentation';
+        document.querySelector('.all-services').hidden = isDocumentation;
+        document.getElementById('focus-panel').hidden = isDocumentation;
         document.getElementById('focus-title').textContent = config.focus;
         document.getElementById('focus-description').textContent = config.description;
         const list = document.getElementById('focus-list');
         config.points.forEach(text => {const li=document.createElement('li');li.textContent=text;list.append(li);});
         document.querySelectorAll('[data-card]').forEach(card => card.classList.toggle('selected',card.dataset.card.split(' ').includes(current)));
       }
-      document.querySelectorAll('[data-contact="whatsapp"]').forEach(link => {const key=link.dataset.placement==='service'?link.dataset.service:current;link.href=whatsappURL(key);if(link.dataset.placement!=='service')link.dataset.service=current;});
+      document.querySelectorAll('[data-contact="whatsapp"]').forEach(link => {
+        const message = link.dataset.waMessage;
+        if (message) {link.href = 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(message); return;}
+        const key = link.dataset.placement === 'service' ? link.dataset.service : current;
+        link.href = whatsappURL(key);
+        if (link.dataset.placement !== 'service') link.dataset.service = current;
+      });
       select.value = current;
       updateRequest();
       }
@@ -397,7 +460,7 @@
       let welcomeSeen = false;
       try { welcomeSeen = !popupPreview && sessionStorage.getItem('aledini-contact-welcome') === '1'; } catch {}
       const revealWelcome = () => {
-        if (welcomeSeen || document.hidden || welcome.open || typeof welcome.showModal !== 'function') return false;
+        if (current === 'documentation' || welcomeSeen || document.hidden || welcome.open || typeof welcome.showModal !== 'function') return false;
         welcome.showModal();document.documentElement.classList.add('dialog-open');welcomeSeen = true;
         if (!popupPreview) { try { sessionStorage.setItem('aledini-contact-welcome','1'); } catch {} }
         window.dataLayer.push({event:'welcome_popup_view',landing_service:current});
