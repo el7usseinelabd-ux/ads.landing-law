@@ -1,0 +1,75 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "service",
+          "value": "criminal"
+        }
+      ],
+      "destination": "/criminal.html"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "service",
+          "value": "family"
+        }
+      ],
+      "destination": "/family.html"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "service",
+          "value": "documentation"
+        }
+      ],
+      "destination": "/documentation.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/hero.bef4cef4bf71.webp",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/logo.81477f2c0280.webp",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/tajawal-400.bb63ba666bca.woff2",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/tajawal-700.e696e106df9e.woff2",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}
