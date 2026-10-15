@@ -187,7 +187,7 @@ HTML_TEMPLATE = r"""<!doctype html>
 <h1 id="hero-title">@@H1@@</h1>
 <p class="hero-subtitle">@@SUBTITLE@@</p>
 <div class="hero-actions"><a class="btn btn-call" href="tel:+966556799995" data-contact="phone" data-service="@@SERVICE@@" data-position="hero">@@CALL_TEXT@@</a><a class="btn btn-wa" href="@@MAIN_WHATSAPP_URL@@" target="_blank" rel="noopener noreferrer" data-contact="whatsapp" data-service="@@SERVICE@@" data-position="hero">@@WHATSAPP_TEXT@@</a></div>
-<p class="trustline">خصوصية في التعامل · جدة، طريق صاري، حي الروضة</p>
+<p class="trustline">سرية تامة في التعامل مع قضيتك · جدة، طريق صاري، حي الروضة</p>
 <nav class="service-chips" aria-label="اختر موضوع الاستفسار">@@CHIPS@@</nav>
 <p class="intro">@@INTRO@@</p>
 </div><div class="hero-visual" aria-hidden="true"></div></div></section>
