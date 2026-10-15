@@ -1,7 +1,7 @@
 {
-  "rewrites": [
+  "routes": [
     {
-      "source": "/",
+      "src": "^/$",
       "has": [
         {
           "type": "query",
@@ -9,10 +9,10 @@
           "value": "criminal"
         }
       ],
-      "destination": "/criminal.html"
+      "dest": "/criminal.html"
     },
     {
-      "source": "/",
+      "src": "^/$",
       "has": [
         {
           "type": "query",
@@ -20,10 +20,10 @@
           "value": "family"
         }
       ],
-      "destination": "/family.html"
+      "dest": "/family.html"
     },
     {
-      "source": "/",
+      "src": "^/$",
       "has": [
         {
           "type": "query",
@@ -31,7 +31,11 @@
           "value": "documentation"
         }
       ],
-      "destination": "/documentation.html"
+      "dest": "/documentation.html"
+    },
+    {
+      "src": "^/$",
+      "dest": "/index.html"
     }
   ],
   "headers": [
@@ -54,7 +58,7 @@
       ]
     },
     {
-      "source": "/assets/tajawal-400.bb63ba666bca.woff2",
+      "source": "/assets/tajawal-400.d89ada41ad2e.woff2",
       "headers": [
         {
           "key": "Cache-Control",
@@ -63,7 +67,7 @@
       ]
     },
     {
-      "source": "/assets/tajawal-700.e696e106df9e.woff2",
+      "source": "/assets/tajawal-700.4f1754100d5a.woff2",
       "headers": [
         {
           "key": "Cache-Control",

@@ -260,6 +260,7 @@ def optimize_assets() -> dict[str, object]:
         source = ROOT / f"tajawal-{weight}.ttf"
         temp = ASSETS / f".tajawal-{weight}.woff2"
         font = TTFont(source)
+        font.recalcTimestamp = False
         font.flavor = "woff2"
         font.save(temp)
         font.close()
@@ -349,13 +350,14 @@ def main() -> None:
         target.write_text(rendered, encoding="utf-8")
         print(f"generated {target.name}: {len(rendered.encode('utf-8')):,} bytes")
 
-    rewrites = []
+    routes = []
     for service in ("criminal", "family", "documentation"):
-        rewrites.append({
-            "source": "/",
+        routes.append({
+            "src": "^/$",
             "has": [{"type": "query", "key": "service", "value": service}],
-            "destination": "/" + str(PAGES[service]["file"]),
+            "dest": "/" + str(PAGES[service]["file"]),
         })
+    routes.append({"src": "^/$", "dest": "/index.html"})
     headers = []
     for name in (assets["hero"], assets["logo"], assets["font400"], assets["font700"]):
         headers.append({
@@ -363,7 +365,7 @@ def main() -> None:
             "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}],
         })
     (ROOT / "vercel.json").write_text(
-        json.dumps({"rewrites": rewrites, "headers": headers}, ensure_ascii=False, indent=2) + "\n",
+        json.dumps({"routes": routes, "headers": headers}, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
     (ROOT / "robots.txt").write_text("User-agent: *\nAllow: /\n", encoding="utf-8")
