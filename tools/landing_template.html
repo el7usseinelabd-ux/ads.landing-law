@@ -194,7 +194,7 @@ function showContactDialog(){
  if(typeof dialog.showModal==='function')dialog.showModal();else dialog.setAttribute('open','');
  seen=true;
  if(!preview){try{sessionStorage.setItem('aledini-contact-popup-seen','1');}catch(error){}}
- var fields=trackingFields();fields.event='welcome_popup_view';fields.position='popup';fields.contact_placement='popup';layer.push(fields);
+ var fields=trackingFields();fields.event='welcome_popup_view';fields.position='popup';fields.contact_placement='popup';layer.push(fields);return true;
 }
 if(preview||!seen){
  window.setTimeout(function(){
