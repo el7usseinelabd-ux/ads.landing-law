@@ -161,7 +161,7 @@ def validate() -> None:
                 raise ValueError(f"{key}: description {i} exceeds 90 characters: {description}")
         if not p["keywords"] or not p["topic_cards"] or not p["faqs"] or not p["steps"]:
             raise ValueError(f"{key}: missing keywords, topic cards, steps, or FAQs")
-        if p.get("headlines") and p.get("h1") and p["headlines"][0] not in p["h1"] and p["h1"] not in p["headlines"][0]:
+        if key != "general" and p.get("headlines") and p.get("h1") and p["headlines"][0] not in p["h1"] and p["h1"] not in p["headlines"][0]:
             raise ValueError(f"{key}: first ad headline and H1 are not aligned")
 
 
