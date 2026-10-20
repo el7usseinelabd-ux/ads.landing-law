@@ -144,7 +144,7 @@ def render_ad_assets() -> str:
     tracking = "utm_source=google&utm_medium=cpc&utm_campaign={campaignid}&utm_content={adgroupid}&utm_term={keyword}"
     return """<!doctype html>
 <html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>أصول Google Ads | مكتب العديني للمحاماة</title>
+<title>أصول Google Ads | مكتب المحامي عبدالعزيز عبدالله العديني للمحاماة والاستشارات القانونية</title>
 <meta name="robots" content="noindex,nofollow">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#f5f6f2;color:#19261f;font-family:Tahoma,Arial,sans-serif;line-height:1.7}
@@ -163,7 +163,7 @@ header{background:#10271d;color:#fff;padding:30px 20px 25px;border-bottom:3px so
 footer{background:#10271d;color:#d8e2d9;padding:22px 18px;font-size:13px}
 @media(max-width:800px){.grid{grid-template-columns:1fr}.card-top h3{font-size:18px}}
 </style></head><body>
-<header><div class="wrap"><h1>أصول الحملات الإعلانية — مكتب العديني</h1><p>اقتراحات كلمات مفتاحية وعناوين وأوصاف، مع رابط مستقل لكل صفحة هبوط. راجعها قبل إضافتها إلى Google Ads.</p></div></header>
+<header><div class="wrap"><h1>أصول الحملات الإعلانية — مكتب المحامي عبدالعزيز عبدالله العديني للمحاماة والاستشارات القانونية</h1><p>اقتراحات كلمات مفتاحية وعناوين وأوصاف، مع رابط مستقل لكل صفحة هبوط. راجعها قبل إضافتها إلى Google Ads.</p></div></header>
 <section class="setup wrap"><strong>لاحقة تتبّع مقترحة</strong><p>أضفها في إعدادات تتبع Google Ads مرة واحدة فقط، بعد مراجعة إعدادات الحساب الحالية:</p><code>""" + tracking + """</code></section>
 <div class="toolbar wrap"><input id="search" type="search" placeholder="ابحث باسم الخدمة أو كلمة مفتاحية..." aria-label="البحث في المجموعات"><span class="summary" id="summary">""" + str(len(ORDER)) + """ مجموعة مقترحة</span></div>
 <main class="grid wrap">""" + "".join(cards) + """</main>
