@@ -64,7 +64,7 @@ def render_page(key: str, page: dict) -> str:
         "@@WHATSAPP_TEXT@@": e(page["whatsapp_text"]),
         "@@MAIN_WA_URL@@": e(wa(page["main_message"])),
         "@@VISUAL_TITLE@@": e(page["label"]),
-        "@@POPUP_COPY@@": e("تواصل معنا لمناقشة طلبك في " + page["label"] + " وتحديد المعلومات اللازمة للخطوة التالية."),
+        "@@POPUP_COPY@@": e("تواصل مع مكتب المحامي عبدالعزيز عبدالله العديني عبر الاتصال أو واتساب، ووضّح استفسارك لمعرفة الخطوة المناسبة."),
         "@@VISUAL_COPY@@": "تواصل لعرض ملخص المسألة وتحديد المعلومات المطلوبة",
         "@@CHIPS@@": "".join(chips),
         "@@FAQS@@": "".join(faqs),
