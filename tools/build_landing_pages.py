@@ -37,14 +37,51 @@ def canonical(key: str, page: dict) -> str:
     return BASE_URL + ("/" if key == "general" else "/" + page["file"])
 
 
-def render_page(key: str, page: dict) -> str:
-    chips = []
-    for label, message in page["chips"]:
-        chips.append(
-            '<a class="topic-link" href="' + e(wa(message)) + '" target="_blank" '
+def render_topic_cards(key: str, page: dict) -> str:
+    cards = []
+    for i, item in enumerate(page.get("topic_cards", []), 1):
+        msg_url = e(wa(item["message"]))
+        details = ""
+        if item.get("href"):
+            details = '<a class="topic-details" href="' + e(item["href"]) + '">تفاصيل الخدمة</a>'
+        cards.append(
+            '<article class="topic-card"><div class="topic-card-top">'
+            '<span class="topic-index">' + f"{i:02d}" + '</span><span class="topic-mark" aria-hidden="true"></span></div>'
+            '<h3>' + e(item["title"]) + '</h3><p>' + e(item["description"]) + '</p>'
+            '<div class="topic-actions"><a class="topic-wa" href="' + msg_url + '" target="_blank" '
             'rel="noopener noreferrer" data-contact="whatsapp" data-service="' + e(key)
-            + '" data-position="chip">' + e(label) + '</a>'
+            + '" data-position="topic_card">اسأل عبر واتساب</a>' + details + '</div></article>'
         )
+    return "".join(cards)
+
+
+def render_prep(page: dict) -> str:
+    prep = page.get("prep")
+    if not prep:
+        return ""
+    items = "".join("<li>" + e(item) + "</li>" for item in prep.get("items", []))
+    return (
+        '<section class="prep-section" aria-labelledby="prep-title"><div class="prep-inner">'
+        '<div class="prep-intro"><p class="kicker">قبل التواصل</p><h2 id="prep-title">' + e(prep["title"]) + '</h2>'
+        '<p>' + e(prep.get("intro", "")) + '</p></div><ol class="prep-list">' + items + '</ol>'
+        '</div></section>'
+    )
+
+
+def render_steps(page: dict) -> str:
+    steps = []
+    for i, item in enumerate(page.get("steps", []), 1):
+        steps.append(
+            '<article class="step-card"><span class="step-number">' + f"{i:02d}" + '</span>'
+            '<h3>' + e(item["title"]) + '</h3><p>' + e(item["text"]) + '</p></article>'
+        )
+    return "".join(steps)
+
+
+def render_page(key: str, page: dict) -> str:
+    trust_items = "".join("<li>" + e(item) + "</li>" for item in page.get(
+        "trust_items", ["مراعاة سرية المعلومات", "توضيح الخطوات والمستندات", "الأتعاب تُحدد قبل البدء"]
+    ))
     faqs = []
     for question, answer in page["faqs"]:
         faqs.append('<details class="faq-item"><summary>' + e(question)
@@ -65,10 +102,21 @@ def render_page(key: str, page: dict) -> str:
         "@@WHATSAPP_TEXT@@": e(page["whatsapp_text"]),
         "@@MAIN_WA_URL@@": e(wa(page["main_message"])),
         "@@VISUAL_TITLE@@": e(page["label"]),
-        "@@POPUP_COPY@@": e("تواصل مع مكتب المحامي عبدالعزيز عبدالله العديني عبر الاتصال أو واتساب، ووضّح استفسارك لمعرفة الخطوة المناسبة."),
-        "@@VISUAL_COPY@@": "تواصل لعرض ملخص المسألة وتحديد المعلومات المطلوبة",
-        "@@CHIPS@@": "".join(chips),
+        "@@VISUAL_COPY@@": e(page.get("visual_copy", "نوضح الخطوات والمستندات المطلوبة بحسب طبيعة طلبك.")),
+        "@@TRUST_ITEMS@@": trust_items,
+        "@@TOPICS_HEADING@@": e(page.get("topics_heading", "اختر موضوع استفسارك")),
+        "@@TOPICS_INTRO@@": e(page.get("topics_intro", "اختر الموضوع الأقرب إلى طلبك لبدء رسالة واتساب مخصصة.")),
+        "@@TOPIC_CARDS@@": render_topic_cards(key, page),
+        "@@PREP_SECTION@@": render_prep(page),
+        "@@STEPS@@": render_steps(page),
         "@@FAQS@@": "".join(faqs),
+        "@@POPUP_TITLE@@": e(page.get("popup_title", "هل تحتاج إلى استشارة قانونية؟")),
+        "@@POPUP_COPY@@": e(page.get("popup_copy", "تواصل مع المكتب واذكر نوع طلبك باختصار لبحث الخطوة التالية.")),
+        "@@POPUP_CALL_TEXT@@": e(page.get("popup_call_text", page["call_text"])),
+        "@@POPUP_WA_TEXT@@": e(page.get("popup_wa_text", page["whatsapp_text"])),
+        "@@CONTACT_TITLE@@": e(page.get("contact_title", "تواصل مع المكتب")),
+        "@@CONTACT_COPY@@": e(page.get("contact_copy", "ابدأ بملخص واضح للمسألة. تُحدد المستندات ونطاق العمل والأتعاب قبل البدء.")),
+        "@@LOCATION_TEXT@@": e(page.get("location_text", "جدة · طريق صاري · حي الروضة")),
     }
     output = TEMPLATE
     for token, value in replacements.items():
@@ -76,7 +124,6 @@ def render_page(key: str, page: dict) -> str:
     if "@@" in output:
         raise ValueError(f"Unfilled template token in {key}")
     return output
-
 
 def make_routes() -> dict:
     routes = []
@@ -112,8 +159,10 @@ def validate() -> None:
         for i, description in enumerate(p["ad_descriptions"], 1):
             if len(list(description)) > 90:
                 raise ValueError(f"{key}: description {i} exceeds 90 characters: {description}")
-        if not p["keywords"] or not p["chips"] or not p["faqs"]:
-            raise ValueError(f"{key}: missing keywords, topics, or FAQs")
+        if not p["keywords"] or not p["topic_cards"] or not p["faqs"] or not p["steps"]:
+            raise ValueError(f"{key}: missing keywords, topic cards, steps, or FAQs")
+        if p.get("headlines") and p.get("h1") and p["headlines"][0] not in p["h1"] and p["h1"] not in p["headlines"][0]:
+            raise ValueError(f"{key}: first ad headline and H1 are not aligned")
 
 
 def render_ad_assets() -> str:
