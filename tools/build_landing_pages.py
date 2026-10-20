@@ -151,6 +151,11 @@ def make_routes() -> dict:
 
 
 def validate() -> None:
+    prohibited = ("أفضل", "نضمن", "ضمان", "24 ساعة", "خلال دقائق", "وزارة العدل")
+    serialized_services = json.dumps(SERVICES, ensure_ascii=False)
+    for phrase in prohibited:
+        if phrase in serialized_services:
+            raise ValueError(f"Prohibited marketing phrase found in services content: {phrase}")
     for key in ORDER:
         p = SERVICES[key]
         for i, headline in enumerate(p["headlines"], 1):
