@@ -6,10 +6,54 @@
         {
           "type": "query",
           "key": "service",
-          "value": "criminal"
+          "value": "commercial"
         }
       ],
-      "dest": "/criminal.html"
+      "dest": "/commercial.html"
+    },
+    {
+      "src": "^/$",
+      "has": [
+        {
+          "type": "query",
+          "key": "service",
+          "value": "companies"
+        }
+      ],
+      "dest": "/companies.html"
+    },
+    {
+      "src": "^/$",
+      "has": [
+        {
+          "type": "query",
+          "key": "service",
+          "value": "partnership"
+        }
+      ],
+      "dest": "/partnership.html"
+    },
+    {
+      "src": "^/$",
+      "has": [
+        {
+          "type": "query",
+          "key": "service",
+          "value": "labor"
+        }
+      ],
+      "dest": "/labor.html"
+    },
+    {
+      "src": "^/$",
+      "has": [
+        {
+          "type": "query",
+          "key": "service",
+          "value": "realestate"
+        }
+      ],
+      "dest": "/realestate.html"
     },
     {
       "src": "^/$",
@@ -21,6 +65,50 @@
         }
       ],
       "dest": "/family.html"
+    },
+    {
+      "src": "^/$",
+      "has": [
+        {
+          "type": "query",
+          "key": "service",
+          "value": "contracts"
+        }
+      ],
+      "dest": "/contracts.html"
+    },
+    {
+      "src": "^/$",
+      "has": [
+        {
+          "type": "query",
+          "key": "service",
+          "value": "criminal"
+        }
+      ],
+      "dest": "/criminal.html"
+    },
+    {
+      "src": "^/$",
+      "has": [
+        {
+          "type": "query",
+          "key": "service",
+          "value": "execution"
+        }
+      ],
+      "dest": "/execution.html"
+    },
+    {
+      "src": "^/$",
+      "has": [
+        {
+          "type": "query",
+          "key": "service",
+          "value": "consultation"
+        }
+      ],
+      "dest": "/consultation.html"
     },
     {
       "src": "^/$",
