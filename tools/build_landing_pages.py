@@ -53,6 +53,7 @@ def render_page(key: str, page: dict) -> str:
         "@@TITLE@@": e(page["title"]),
         "@@DESCRIPTION@@": e(page["description"]),
         "@@CANONICAL@@": e(canonical(key, page)),
+        "@@MAP_URL@@": e(BRAND["map_url"]),
         "@@GTM_ID@@": e(BRAND["gtm_id"]),
         "@@PHONE_DISPLAY@@": e(BRAND["phone_display"]),
         "@@SERVICE@@": e(key),
