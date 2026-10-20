@@ -8,6 +8,17 @@
 - `tools/build_landing_pages.py`: مولّد الصفحات وملف توجيه Vercel ولوحة أصول الإعلانات.
 - `google-ads-assets.html`: روابط Final URL وكلمات مفتاحية وعناوين وأوصاف مقترحة لكل مجموعة.
 
+## التصميم والمراجعة
+- تصميم موحّد جديد يعتمد على واجهة متجاوبة وبطاقات خدمات برسائل واتساب مخصصة.
+- نافذة التواصل تظهر مرة واحدة في الجلسة، مع الاتصال أولًا ثم واتساب.
+- أحداث التفاعل: `click_call` و`click_whatsapp` وتتضمن `service` و`position`.
+- رابط الخريطة المعتمد في الإعدادات: https://share.google/wMPubnTMSV2CPrDpF
+- التذييل يتضمن سياسة الخصوصية وشروط الاستخدام والتنبيه القانوني التعريفي.
+
+## صفحات السياسات
+- [سياسة الخصوصية](https://adslanding-law.vercel.app/privacy.html)
+- [شروط الاستخدام](https://adslanding-law.vercel.app/terms.html)
+
 ## روابط صفحات الهبوط
 | الخدمة | Final URL |
 |---|---|
@@ -19,7 +30,7 @@
 | القضايا العقارية | https://adslanding-law.vercel.app/realestate.html |
 | الأحوال الشخصية والميراث | https://adslanding-law.vercel.app/family.html |
 | صياغة ومراجعة العقود | https://adslanding-law.vercel.app/contracts.html |
-| القضايا الجزائية | https://adslanding-law.vercel.app/criminal.html |
+| القضايا الجنائية | https://adslanding-law.vercel.app/criminal.html |
 | التنفيذ وتحصيل الحقوق | https://adslanding-law.vercel.app/execution.html |
 | الاستشارات القانونية | https://adslanding-law.vercel.app/consultation.html |
 | التوثيق العدلي | https://adslanding-law.vercel.app/documentation.html |
