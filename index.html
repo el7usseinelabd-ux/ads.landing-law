@@ -27,26 +27,23 @@
 
 :root {
   color-scheme: light;
-  --forest-dark: #0A1913;
-  --forest: #10271D;
-  --forest-light: #183B2B;
-  --gold: #DFB66E;
-  --gold-light: #F4D393;
-  --gold-gradient: linear-gradient(135deg, #DFB66E 0%, #C39952 100%);
-  --ink: #18231D;
-  --muted: #64746B;
-  --paper: #F7F7F2;
-  --card-bg: #FFFFFF;
-  --line: #E2E8E4;
+  --primary-navy: #0F281E;
+  --primary-green: #173B2B;
+  --accent-gold: #C59B27;
+  --gold-light: #DFB66E;
+  --bg-light: #F9F9F6;
   --white: #FFFFFF;
+  --text-dark: #1C2826;
+  --text-muted: #586B63;
+  --border-color: #E2E8E4;
 }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--bg-light);
+  color: var(--text-dark);
   font-family: Tajawal, Arial, sans-serif;
   font-size: 17px;
   line-height: 1.65;
@@ -57,13 +54,15 @@ img { max-width: 100%; display: block; }
 p { margin: 0; }
 h1, h2, h3, h4 { margin: 0; font-weight: 700; }
 
+/* Header الفاخر بالخلفية البيضاء المريحة */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(10, 25, 19, 0.95);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(223, 182, 110, 0.25);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--gold-light);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
 }
 .header-inner {
   max-width: 1200px;
@@ -79,54 +78,55 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   gap: 12px;
 }
 .brand img {
-  width: 48px;
-  height: 45px;
-  border-radius: 8px;
+  width: 52px;
+  height: 48px;
   object-fit: contain;
 }
 .brand-text {
   display: flex;
   flex-direction: column;
   line-height: 1.2;
-  color: #F4EFE9;
+  color: var(--primary-navy);
 }
 .brand-text strong {
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 700;
 }
 .brand-text small {
-  font-size: 11px;
-  color: var(--gold);
+  font-size: 12px;
+  color: var(--accent-gold);
+  font-weight: 700;
 }
 .header-call {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 20px;
-  border: 1px solid var(--gold);
+  padding: 10px 22px;
+  border: 2px solid var(--accent-gold);
   border-radius: 50px;
-  background: rgba(223, 182, 110, 0.1);
-  color: var(--gold-light);
+  background: #FFFBF0;
+  color: var(--primary-navy);
   font-weight: 700;
   transition: all 0.3s ease;
 }
 .header-call:hover {
-  background: var(--gold);
-  color: var(--forest-dark);
+  background: var(--accent-gold);
+  color: #FFF;
 }
 
+/* Hero Section مريح وفاتح */
 .hero {
   position: relative;
-  background: radial-gradient(circle at 80% 20%, rgba(24, 59, 43, 0.7) 0%, rgba(10, 25, 19, 1) 75%);
-  color: #fff;
-  padding: 50px 0 70px;
-  overflow: hidden;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F3F6F4 100%);
+  padding: 60px 0 70px;
+  border-bottom: 1px solid var(--border-color);
 }
 .hero-inner {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1.25fr 0.75fr;
   gap: 40px;
   align-items: center;
 }
@@ -134,66 +134,68 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 14px;
-  background: rgba(223, 182, 110, 0.15);
-  border: 1px solid rgba(223, 182, 110, 0.3);
+  padding: 6px 16px;
+  background: rgba(197, 155, 39, 0.1);
+  border: 1px solid var(--gold-light);
   border-radius: 50px;
   font-size: 14px;
-  color: var(--gold-light);
+  color: var(--accent-gold);
   font-weight: 700;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 .hero h1 {
   font-size: 38px;
-  line-height: 1.25;
+  line-height: 1.3;
   font-weight: 800;
-  margin-bottom: 16px;
-  color: #FFFFFF;
+  margin-bottom: 18px;
+  color: var(--primary-navy);
 }
 .hero-subtitle {
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.7;
-  color: #C8D6CD;
-  margin-bottom: 24px;
+  color: var(--text-muted);
+  margin-bottom: 28px;
 }
 
+/* Service Chips بألوان واضحة */
 .service-chips {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 .service-chips a {
-  padding: 9px 18px;
+  padding: 10px 20px;
   border-radius: 8px;
-  border: 1px solid rgba(223, 182, 110, 0.35);
-  background: rgba(255, 255, 255, 0.05);
-  font-size: 14px;
+  border: 1px solid var(--border-color);
+  background: var(--white);
+  font-size: 15px;
   font-weight: 700;
-  color: #E2ECE5;
+  color: var(--primary-navy);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
   transition: all 0.2s ease;
 }
 .service-chips a:hover {
-  border-color: var(--gold);
-  color: var(--gold-light);
-  background: rgba(223, 182, 110, 0.15);
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  transform: translateY(-2px);
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  margin-bottom: 20px;
+  gap: 16px;
+  margin-bottom: 24px;
 }
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 16px 28px;
+  padding: 16px 32px;
   border-radius: 12px;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 17px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
   border: none;
@@ -202,37 +204,40 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   transform: translateY(-2px);
 }
 .btn-call {
-  background: var(--gold-gradient);
-  color: var(--forest-dark);
-  box-shadow: 0 10px 25px rgba(223, 182, 110, 0.3);
+  background: linear-gradient(135deg, #C59B27 0%, #A37E1C 100%);
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px rgba(197, 155, 39, 0.3);
 }
 .btn-whatsapp {
   background: #25D366;
   color: #FFFFFF;
-  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.25);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
 }
 
 .trustline {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-size: 14px;
-  color: #A3B8AC;
+  color: var(--text-muted);
+  font-weight: 700;
 }
 
+/* بطاقة خدمات جانبية بارزة وانيقة */
 .hero-card {
-  background: linear-gradient(145deg, rgba(24, 59, 43, 0.5), rgba(10, 25, 19, 0.85));
-  border: 1px solid rgba(223, 182, 110, 0.3);
+  background: var(--primary-navy);
+  color: #FFFFFF;
   border-radius: 20px;
-  padding: 28px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  padding: 32px;
+  box-shadow: 0 20px 40px rgba(15, 40, 30, 0.15);
+  border: 2px solid var(--accent-gold);
 }
 .hero-card-title {
-  font-size: 20px;
-  color: var(--gold);
-  margin-bottom: 16px;
-  border-bottom: 1px solid rgba(223, 182, 110, 0.2);
-  padding-bottom: 10px;
+  font-size: 22px;
+  color: var(--gold-light);
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(223, 182, 110, 0.3);
+  padding-bottom: 12px;
 }
 .hero-card-list {
   list-style: none;
@@ -241,35 +246,39 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
 }
 .hero-card-list li {
   position: relative;
-  padding-right: 24px;
-  margin-bottom: 12px;
+  padding-right: 26px;
+  margin-bottom: 16px;
   color: #E2ECE5;
   font-size: 15px;
+  line-height: 1.6;
 }
 .hero-card-list li::before {
   content: '✓';
   position: absolute;
   right: 0;
-  color: var(--gold);
+  color: var(--gold-light);
   font-weight: bold;
 }
 
 .map-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
   gap: 8px;
-  margin-top: 15px;
-  padding: 10px 16px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(223, 182, 110, 0.4);
-  border-radius: 8px;
+  margin-top: 20px;
+  padding: 12px 18px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--gold-light);
+  border-radius: 10px;
   color: var(--gold-light);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   transition: 0.2s;
 }
 .map-btn:hover {
-  background: rgba(223, 182, 110, 0.2);
+  background: var(--gold-light);
+  color: var(--primary-navy);
 }
 
 .section-padding {
@@ -284,36 +293,36 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   margin-bottom: 40px;
 }
 .section-title {
-  font-size: 30px;
-  color: var(--forest-dark);
+  font-size: 32px;
+  color: var(--primary-navy);
 }
 .section-title::after {
   content: '';
   display: block;
-  width: 50px;
-  height: 3px;
-  background: var(--gold);
-  margin: 10px auto 0;
+  width: 60px;
+  height: 4px;
+  background: var(--accent-gold);
+  margin: 12px auto 0;
   border-radius: 2px;
 }
 .faq-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-  gap: 18px;
+  gap: 20px;
 }
 .faq-item {
-  background: var(--card-bg);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 18px 22px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 20px 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
 }
 .faq-item summary {
   cursor: pointer;
   list-style: none;
   font-weight: 700;
-  font-size: 17px;
-  color: var(--forest);
+  font-size: 18px;
+  color: var(--primary-navy);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -321,23 +330,22 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
 .faq-item summary::-webkit-details-marker { display: none; }
 .faq-item summary::after {
   content: '+';
-  font-size: 20px;
-  color: var(--gold);
+  font-size: 22px;
+  color: var(--accent-gold);
 }
 .faq-item[open] summary::after {
   content: '−';
 }
 .faq-item p {
-  margin-top: 10px;
-  color: var(--muted);
+  margin-top: 12px;
+  color: var(--text-muted);
   font-size: 15px;
 }
 
 .contact-details {
-  background: var(--forest);
+  background: var(--primary-navy);
   color: #fff;
   padding: 40px 24px;
-  border-top: 1px solid rgba(223, 182, 110, 0.2);
 }
 .details-inner {
   max-width: 1200px;
@@ -350,7 +358,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
 }
 
 .site-footer {
-  background: var(--forest-dark);
+  background: #0A1B14;
   color: #8D9E94;
   padding: 24px 24px;
   font-size: 14px;
@@ -373,10 +381,11 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   bottom: 0;
   display: none;
   gap: 10px;
-  padding: 10px 14px;
-  background: rgba(10, 25, 19, 0.96);
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(223, 182, 110, 0.3);
+  border-top: 2px solid var(--accent-gold);
+  box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
   z-index: 90;
 }
 .mobile-btn {
@@ -391,8 +400,8 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   text-align: center;
 }
 .mobile-btn-call {
-  background: var(--gold-gradient);
-  color: var(--forest-dark);
+  background: var(--accent-gold);
+  color: #FFF;
 }
 .mobile-btn-wa {
   background: #25D366;
@@ -402,14 +411,14 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
 /* Modal / Popup */
 .welcome-dialog {
   width: min(520px, calc(100% - 32px));
-  border: 1px solid rgba(223, 182, 110, 0.4);
+  border: 2px solid var(--accent-gold);
   border-radius: 20px;
-  padding: 28px 24px;
+  padding: 30px 24px;
   background: #FFFFFF;
-  box-shadow: 0 25px 80px rgba(0,0,0,0.3);
+  box-shadow: 0 25px 80px rgba(0,0,0,0.25);
 }
 .welcome-dialog::backdrop {
-  background: rgba(10, 25, 19, 0.7);
+  background: rgba(15, 40, 30, 0.6);
   backdrop-filter: blur(4px);
 }
 .welcome-head {
@@ -421,9 +430,10 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
 .welcome-kicker {
   font-size: 13px;
   font-weight: bold;
-  color: var(--forest);
-  background: rgba(223, 182, 110, 0.2);
-  padding: 4px 12px;
+  color: var(--primary-navy);
+  background: #FFF8E7;
+  border: 1px solid var(--accent-gold);
+  padding: 4px 14px;
   border-radius: 50px;
 }
 .welcome-close {
@@ -431,17 +441,17 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   background: transparent;
   font-size: 24px;
   cursor: pointer;
-  color: #999;
+  color: #888;
 }
 .welcome-title {
   font-size: 22px;
-  color: var(--forest-dark);
+  color: var(--primary-navy);
   text-align: center;
   margin-bottom: 8px;
 }
 .welcome-copy {
   font-size: 15px;
-  color: var(--muted);
+  color: var(--text-muted);
   text-align: center;
   margin-bottom: 20px;
 }
@@ -449,21 +459,21 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   display: block;
   font-size: 14px;
   font-weight: 700;
-  color: var(--forest);
+  color: var(--primary-navy);
   margin-bottom: 8px;
 }
 .popup-select {
   width: 100%;
   padding: 12px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   margin-bottom: 20px;
-  background: var(--paper);
-  color: var(--ink);
+  background: #F9F9F6;
+  color: var(--text-dark);
   outline: none;
 }
 .popup-select:focus {
-  border-color: var(--gold);
+  border-color: var(--accent-gold);
 }
 
 @media (max-width: 900px) {
@@ -485,7 +495,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
 <header class="site-header" id="top">
   <div class="header-inner">
     <a class="brand" href="./" aria-label="الصفحة الرئيسية">
-      <img src="./assets/logo.81477f2c0280.webp" width="48" height="45" alt="شعار مكتب عبدالعزيز عبدالله العديني للمحاماة">
+      <img src="./assets/logo.81477f2c0280.webp" width="52" height="48" alt="شعار مكتب عبدالعزيز عبدالله العديني للمحاماة">
       <div class="brand-text">
         <strong>مكتب عبدالعزيز العديني</strong>
         <small>للمحاماة والاستشارات القانونية</small>
@@ -508,7 +518,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
         
         <p class="hero-subtitle">استشارات وقضايا ومعاملات قانونية للأفراد والشركات بحرفية عالية وسرية تامة أمام كافة المحاكم واللجان القضائية.</p>
 
-        <!-- تصنيفات القضايا العامة الدقيقة -->
+        <!-- تصنيفات القضايا الدقيقة -->
         <nav class="service-chips" aria-label="أنواع القضايا">
           <a href="https://wa.me/966556799995?text=السلام عليكم، أحتاج استشارة في قضايا الأحوال الشخصية" target="_blank" rel="noreferrer">قضايا أحوال شخصية</a>
           <a href="https://wa.me/966556799995?text=السلام عليكم، أحتاج استشارة في قضايا مالية وحقوقية" target="_blank" rel="noreferrer">قضايا مالية وحقوقية</a>
@@ -567,13 +577,13 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   <section class="contact-details">
     <div class="details-inner">
       <div>
-        <strong>مكتب عبدالعزيز عبدالله العديني للمحاماة والاستشارات القانونية</strong>
-        <p>جدة · طريق صاري · حي الروضة</p>
-        <a href="https://share.google/UABcgQlzHqkrNZTnl" target="_blank" rel="noreferrer" style="color: var(--gold); font-size: 14px; text-decoration: underline;">عرض الموقع في خرائط Google 🗺️</a>
+        <strong style="font-size: 18px;">مكتب عبدالعزيز عبدالله العديني للمحاماة والاستشارات القانونية</strong>
+        <p style="color: #C8D6CD; margin-top: 4px;">جدة · طريق صاري · حي الروضة</p>
+        <a href="https://share.google/UABcgQlzHqkrNZTnl" target="_blank" rel="noreferrer" style="color: var(--gold-light); font-size: 14px; text-decoration: underline;">عرض الموقع في خرائط Google 🗺️</a>
       </div>
       <div>
         <span>رقم الاتصال المباشر: </span>
-        <strong dir="ltr" style="color: var(--gold); font-size: 20px;">055 679 9995</strong>
+        <strong dir="ltr" style="color: var(--gold-light); font-size: 22px; display: block; margin-top: 4px;">055 679 9995</strong>
       </div>
     </div>
   </section>
@@ -582,7 +592,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
 <footer class="site-footer">
   <div class="footer-inner">
     <div>جميع الحقوق محفوظة © 2026 - مكتب عبدالعزيز عبدالله العديني للمحاماة</div>
-    <a href="#top" style="color: var(--gold);">العودة للأعلى ↑</a>
+    <a href="#top" style="color: var(--gold-light);">العودة للأعلى ↑</a>
   </div>
 </footer>
 
