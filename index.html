@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>مكتب المحامي عبدالعزيز عبدالله العديني | محاماة واستشارات قانونية بجدة</title>
-<meta name="description" content="مكتب المحامي عبدالعزيز عبدالله العديني للمحاماة والاستشارات القانونية بجدة. استشارات وقضايا ومطالبات للأفراد والشركات بحرفية وسرية تامة.">
+<title>مكتب المحامي عبدالعزيز عبدالله العديني | خدمات قانونية بجدة</title>
+<meta name="description" content="مكتب المحامي عبدالعزيز عبدالله العديني بجدة. استشارات وقضايا ومطالبات للأفراد والشركات بحرفية وسرية تامة.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://adslanding-law.vercel.app/">
 <link rel="icon" href="./assets/logo.81477f2c0280.webp" type="image/webp">
@@ -14,8 +14,8 @@
 <meta property="og:site_name" content="مكتب عبدالعزيز عبدالله العديني للمحاماة">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://adslanding-law.vercel.app/">
-<meta property="og:title" content="مكتب المحامي عبدالعزيز عبدالله العديني | محاماة واستشارات قانونية بجدة">
-<meta property="og:description" content="مكتب المحامي عبدالعزيز عبدالله العديني بجدة للاستشارات والقضايا الحقوقية، الأحوال الشخصية، التجارية والجزائية.">
+<meta property="og:title" content="مكتب المحامي عبدالعزيز عبدالله العديني | خدمات قانونية بجدة">
+<meta property="og:description" content="استشارات وقضايا ومطالبات للأفراد والشركات بحرفية وسرية تامة.">
 <meta property="og:image" content="https://adslanding-law.vercel.app/assets/hero.bef4cef4bf71.webp">
 
 <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
@@ -28,7 +28,6 @@
 :root {
   color-scheme: light;
   --primary-navy: #0F281E;
-  --primary-green: #173B2B;
   --accent-gold: #C59B27;
   --gold-light: #DFB66E;
   --bg-light: #F9F9F6;
@@ -54,13 +53,12 @@ img { max-width: 100%; display: block; }
 p { margin: 0; }
 h1, h2, h3, h4 { margin: 0; font-weight: 700; }
 
-/* Header الفاخر بالخلفية البيضاء المريحة */
+/* Header بسلس وبدون تكرار الاسم المزدوج */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.98);
   border-bottom: 2px solid var(--gold-light);
   box-shadow: 0 4px 15px rgba(0,0,0,0.04);
 }
@@ -78,24 +76,9 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   gap: 12px;
 }
 .brand img {
-  width: 52px;
-  height: 48px;
+  width: 50px;
+  height: 46px;
   object-fit: contain;
-}
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-  color: var(--primary-navy);
-}
-.brand-text strong {
-  font-size: 18px;
-  font-weight: 700;
-}
-.brand-text small {
-  font-size: 12px;
-  color: var(--accent-gold);
-  font-weight: 700;
 }
 .header-call {
   display: inline-flex;
@@ -117,8 +100,8 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
 /* Hero Section مريح وفاتح */
 .hero {
   position: relative;
-  background: linear-gradient(180deg, #FFFFFF 0%, #F3F6F4 100%);
-  padding: 60px 0 70px;
+  background: #FFFFFF;
+  padding: 50px 0 60px;
   border-bottom: 1px solid var(--border-color);
 }
 .hero-inner {
@@ -126,7 +109,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   margin: 0 auto;
   padding: 0 24px;
   display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
+  grid-template-columns: 1.2fr 0.8fr;
   gap: 40px;
   align-items: center;
 }
@@ -141,61 +124,60 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   font-size: 14px;
   color: var(--accent-gold);
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 .hero h1 {
-  font-size: 38px;
-  line-height: 1.3;
+  font-size: 36px;
+  line-height: 1.35;
   font-weight: 800;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   color: var(--primary-navy);
 }
 .hero-subtitle {
-  font-size: 19px;
+  font-size: 18px;
   line-height: 1.7;
   color: var(--text-muted);
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
-/* Service Chips بألوان واضحة */
+/* أزرار الخدمات السريعة */
 .service-chips {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 .service-chips a {
-  padding: 10px 20px;
+  padding: 10px 18px;
   border-radius: 8px;
   border: 1px solid var(--border-color);
-  background: var(--white);
-  font-size: 15px;
+  background: var(--bg-light);
+  font-size: 14px;
   font-weight: 700;
   color: var(--primary-navy);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
   transition: all 0.2s ease;
 }
 .service-chips a:hover {
   border-color: var(--accent-gold);
   color: var(--accent-gold);
-  transform: translateY(-2px);
+  background: #FFF;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 24px;
+  gap: 14px;
+  margin-bottom: 20px;
 }
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 16px 32px;
+  padding: 16px 28px;
   border-radius: 12px;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 16px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
   border: none;
@@ -223,21 +205,21 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   font-weight: 700;
 }
 
-/* بطاقة خدمات جانبية بارزة وانيقة */
+/* بطاقة خدمات جانبية مع ترتيب متناسق */
 .hero-card {
   background: var(--primary-navy);
   color: #FFFFFF;
   border-radius: 20px;
-  padding: 32px;
-  box-shadow: 0 20px 40px rgba(15, 40, 30, 0.15);
+  padding: 28px;
+  box-shadow: 0 15px 35px rgba(15, 40, 30, 0.12);
   border: 2px solid var(--accent-gold);
 }
 .hero-card-title {
-  font-size: 22px;
+  font-size: 20px;
   color: var(--gold-light);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   border-bottom: 1px solid rgba(223, 182, 110, 0.3);
-  padding-bottom: 12px;
+  padding-bottom: 10px;
 }
 .hero-card-list {
   list-style: none;
@@ -246,11 +228,10 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
 }
 .hero-card-list li {
   position: relative;
-  padding-right: 26px;
-  margin-bottom: 16px;
+  padding-right: 24px;
+  margin-bottom: 14px;
   color: #E2ECE5;
   font-size: 15px;
-  line-height: 1.6;
 }
 .hero-card-list li::before {
   content: '✓';
@@ -266,8 +247,8 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   justify-content: center;
   width: 100%;
   gap: 8px;
-  margin-top: 20px;
-  padding: 12px 18px;
+  margin-top: 15px;
+  padding: 12px 16px;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid var(--gold-light);
   border-radius: 10px;
@@ -282,7 +263,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
 }
 
 .section-padding {
-  padding: 70px 24px;
+  padding: 60px 24px;
 }
 .faq-section {
   max-width: 1000px;
@@ -290,38 +271,38 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
 }
 .section-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 .section-title {
-  font-size: 32px;
+  font-size: 28px;
   color: var(--primary-navy);
 }
 .section-title::after {
   content: '';
   display: block;
-  width: 60px;
-  height: 4px;
+  width: 50px;
+  height: 3px;
   background: var(--accent-gold);
-  margin: 12px auto 0;
+  margin: 10px auto 0;
   border-radius: 2px;
 }
 .faq-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 18px;
 }
 .faq-item {
   background: var(--white);
   border: 1px solid var(--border-color);
-  border-radius: 14px;
-  padding: 20px 24px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+  border-radius: 12px;
+  padding: 18px 22px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
 }
 .faq-item summary {
   cursor: pointer;
   list-style: none;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 17px;
   color: var(--primary-navy);
   display: flex;
   align-items: center;
@@ -337,7 +318,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   content: '−';
 }
 .faq-item p {
-  margin-top: 12px;
+  margin-top: 10px;
   color: var(--text-muted);
   font-size: 15px;
 }
@@ -345,7 +326,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
 .contact-details {
   background: var(--primary-navy);
   color: #fff;
-  padding: 40px 24px;
+  padding: 36px 24px;
 }
 .details-inner {
   max-width: 1200px;
@@ -360,7 +341,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
 .site-footer {
   background: #0A1B14;
   color: #8D9E94;
-  padding: 24px 24px;
+  padding: 20px 24px;
   font-size: 14px;
   border-top: 1px solid rgba(255,255,255,0.05);
 }
@@ -382,8 +363,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   display: none;
   gap: 10px;
   padding: 12px 16px;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.98);
   border-top: 2px solid var(--accent-gold);
   box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
   z-index: 90;
@@ -410,10 +390,10 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
 
 /* Modal / Popup */
 .welcome-dialog {
-  width: min(520px, calc(100% - 32px));
+  width: min(500px, calc(100% - 32px));
   border: 2px solid var(--accent-gold);
   border-radius: 20px;
-  padding: 30px 24px;
+  padding: 26px 22px;
   background: #FFFFFF;
   box-shadow: 0 25px 80px rgba(0,0,0,0.25);
 }
@@ -425,7 +405,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 .welcome-kicker {
   font-size: 13px;
@@ -444,16 +424,16 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   color: #888;
 }
 .welcome-title {
-  font-size: 22px;
+  font-size: 20px;
   color: var(--primary-navy);
   text-align: center;
   margin-bottom: 8px;
 }
 .welcome-copy {
-  font-size: 15px;
+  font-size: 14px;
   color: var(--text-muted);
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 .popup-select-label {
   display: block;
@@ -467,7 +447,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   padding: 12px;
   border: 1px solid var(--border-color);
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   background: #F9F9F6;
   color: var(--text-dark);
   outline: none;
@@ -479,7 +459,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; }
   .faq-grid { grid-template-columns: 1fr; }
-  .hero h1 { font-size: 30px; }
+  .hero h1 { font-size: 28px; }
 }
 
 @media (max-width: 760px) {
@@ -495,11 +475,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
 <header class="site-header" id="top">
   <div class="header-inner">
     <a class="brand" href="./" aria-label="الصفحة الرئيسية">
-      <img src="./assets/logo.81477f2c0280.webp" width="52" height="48" alt="شعار مكتب عبدالعزيز عبدالله العديني للمحاماة">
-      <div class="brand-text">
-        <strong>مكتب عبدالعزيز العديني</strong>
-        <small>للمحاماة والاستشارات القانونية</small>
-      </div>
+      <img src="./assets/logo.81477f2c0280.webp" width="50" height="46" alt="شعار المكتب">
     </a>
     <a class="header-call" href="tel:+966556799995" data-contact="phone" data-service="general" data-position="header">
       <span>اتصل بنا: </span>
@@ -514,11 +490,11 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
       <div class="hero-copy">
         <span class="eyebrow">📍 جدة - طريق صاري - حي الروضة</span>
         
-        <h1>مكتب المحامي عبدالعزيز عبدالله العديني للمحاماة بجدة</h1>
+        <h1>مكتب المحامي عبدالعزيز عبدالله العديني للمحاماة والاستشارات القانونية</h1>
         
-        <p class="hero-subtitle">استشارات وقضايا ومعاملات قانونية للأفراد والشركات بحرفية عالية وسرية تامة أمام كافة المحاكم واللجان القضائية.</p>
+        <p class="hero-subtitle">استشارات وقضايا ومعاملات قانونية للأفراد والشركات بحرفية عالية وسرية تامّة أمام كافة المحاكم واللجان القضائية.</p>
 
-        <!-- تصنيفات القضايا الدقيقة -->
+        <!-- أزرار التصنيفات بدون تكرار -->
         <nav class="service-chips" aria-label="أنواع القضايا">
           <a href="https://wa.me/966556799995?text=السلام عليكم، أحتاج استشارة في قضايا الأحوال الشخصية" target="_blank" rel="noreferrer">قضايا أحوال شخصية</a>
           <a href="https://wa.me/966556799995?text=السلام عليكم، أحتاج استشارة في قضايا مالية وحقوقية" target="_blank" rel="noreferrer">قضايا مالية وحقوقية</a>
@@ -536,7 +512,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
       </div>
 
       <div class="hero-card">
-        <h3 class="hero-card-title">خدمات مكتب عبدالعزيز العديني</h3>
+        <h3 class="hero-card-title">مجالات التخصص والمرافعة</h3>
         <ul class="hero-card-list">
           <li>تمثيل قضائي أمام المحاكم العامة، التجارية، والجزائية.</li>
           <li>دعاوى الأحوال الشخصية (الفسخ، الطلاق، الحضانة، والتركات).</li>
@@ -577,7 +553,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   <section class="contact-details">
     <div class="details-inner">
       <div>
-        <strong style="font-size: 18px;">مكتب عبدالعزيز عبدالله العديني للمحاماة والاستشارات القانونية</strong>
+        <strong style="font-size: 18px;">مقر المكتب</strong>
         <p style="color: #C8D6CD; margin-top: 4px;">جدة · طريق صاري · حي الروضة</p>
         <a href="https://share.google/UABcgQlzHqkrNZTnl" target="_blank" rel="noreferrer" style="color: var(--gold-light); font-size: 14px; text-decoration: underline;">عرض الموقع في خرائط Google 🗺️</a>
       </div>
@@ -605,13 +581,13 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   </a>
 </nav>
 
-<!-- Popup النافذة المنبثقة للتحويل السريع -->
+<!-- Popup النافذة المنبثقة -->
 <dialog id="welcome-dialog" class="welcome-dialog">
   <div class="welcome-head">
     <span class="welcome-kicker">استشارة قانونية عاجلة</span>
     <button type="button" class="welcome-close" data-close-welcome aria-label="إغلاق">×</button>
   </div>
-  <h2 class="welcome-title">مكتب المحامي عبدالعزيز العديني</h2>
+  <h2 class="welcome-title">طلب استشارة قانونية</h2>
   <p class="welcome-copy">اختر نوع موضوعك القانوني لتوجيهك مباشرة إلى المحامي المختص عبر الواتساب خلال دقائق:</p>
   
   <label for="popup-case-type" class="popup-select-label">حدد نوع القضية:</label>
@@ -635,7 +611,6 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   'use strict';
   const dataLayer = window.dataLayer = window.dataLayer || [];
 
-  // تتبع التحويلات والإجراءات (Google Analytics / Google Ads)
   document.addEventListener('click', event => {
     const link = event.target.closest('[data-contact]');
     if (!link) return;
@@ -648,7 +623,6 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
     });
   });
 
-  // التحكم بالنافذة المنبثقة
   const welcome = document.getElementById('welcome-dialog');
   const closeWelcome = document.querySelector('[data-close-welcome]');
   const waSubmitBtn = document.getElementById('popup-wa-submit');
@@ -685,7 +659,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; }
   };
 
   if (!seen) {
-    window.setTimeout(showPopup, 3000); // إظهار النافذة بعد 3 ثوانٍ
+    window.setTimeout(showPopup, 3000);
   }
 })();
 </script>
