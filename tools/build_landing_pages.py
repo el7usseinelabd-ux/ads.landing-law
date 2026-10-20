@@ -83,9 +83,14 @@ def render_page(key: str, page: dict) -> str:
         "trust_items", ["مراعاة سرية المعلومات", "توضيح الخطوات والمستندات", "الأتعاب تُحدد قبل البدء"]
     ))
     faqs = []
-    for question, answer in page["faqs"]:
+    for item in page["faqs"]:
+        question, answer = item[0], item[1]
+        answer_html = e(answer)
+        if len(item) > 2 and isinstance(item[2], dict) and item[2].get("href"):
+            link = item[2]
+            answer_html += ' <a href="' + e(link["href"]) + '">' + e(link.get("label", "تفاصيل الخدمة")) + '</a>'
         faqs.append('<details class="faq-item"><summary>' + e(question)
-                    + '</summary><p>' + e(answer) + '</p></details>')
+                    + '</summary><p>' + answer_html + '</p></details>')
     replacements = {
         "@@TITLE@@": e(page["title"]),
         "@@DESCRIPTION@@": e(page["description"]),
