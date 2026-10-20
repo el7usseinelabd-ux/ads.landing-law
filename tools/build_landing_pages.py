@@ -156,13 +156,17 @@ def make_routes() -> dict:
 
 
 def validate() -> None:
-    prohibited = ("أفضل", "نضمن", "ضمان", "24 ساعة", "خلال دقائق", "وزارة العدل")
-    serialized_services = json.dumps(SERVICES, ensure_ascii=False)
-    for phrase in prohibited:
-        if phrase in serialized_services:
-            raise ValueError(f"Prohibited marketing phrase found in services content: {phrase}")
+    prohibited = ("أفضل", "نضمن", "ضمان", "24 ساعة", "خلال دقائق")
     for key in ORDER:
         p = SERVICES[key]
+        serialized_page = json.dumps(p, ensure_ascii=False)
+        for phrase in prohibited:
+            if phrase in serialized_page:
+                raise ValueError(f"Prohibited marketing phrase found in {key}: {phrase}")
+        if key != "documentation" and "وزارة العدل" in serialized_page:
+            raise ValueError(f"Government reference is only permitted in the documentation page: {key}")
+        if key == "documentation" and "موثق معتمد من وزارة العدل" not in serialized_page:
+            raise ValueError("Documentation page must use the confirmed professional designation.")
         for i, headline in enumerate(p["headlines"], 1):
             if len(list(headline)) > 30:
                 raise ValueError(f"{key}: headline {i} exceeds 30 characters: {headline}")
